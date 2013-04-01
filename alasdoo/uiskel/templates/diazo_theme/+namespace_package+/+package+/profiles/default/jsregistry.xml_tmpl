@@ -19,13 +19,13 @@
         conditionalcomment=""
         cookable="True"
         enabled="True"
-        expression="python:context.restrictedTraverse('@@active-subtheme')() == 'default'"
+        expression=""
         inline="False"
-        id="++theme++${namespace_package}.${package}/default/javascript/script.js"
+        id="++theme++${namespace_package}.${package}/javascript/script.js"
     />
 
     <!-- Disable TinyMCE -->
-    <javascript
+    <!--<javascript
         cacheable="True"
         compression="none"
         conditionalcomment=""
@@ -34,8 +34,8 @@
         expression=""
         inline="False"
         id="tiny_mce.js"
-    />
-    <javascript
+    />-->
+    <!--<javascript
         cacheable="True"
         compression="none"
         conditionalcomment=""
@@ -44,10 +44,10 @@
         expression=""
         inline="False"
         id="tiny_mce_init.js"
-    />
+    />-->
 
     <!-- Disable Form tabbing -->
-    <javascript
+    <!--<javascript
         cacheable="True"
         compression="safe"
         conditionalcomment=""
@@ -56,68 +56,6 @@
         expression=""
         inline="False"
         id="form_tabbing.js"
-    />
-    <!-- Form accordion -->
-    <javascript
-        authenticated="True"
-        cacheable="True"
-        compression="safe"
-        conditionalcomment=""
-        cookable="True"
-        enabled="True"
-        expression=""
-        inline="False"
-        id="++resource++hexagonit.primacontrol.js/form_accordion.js"
-        insert-before="++resource++plone.app.jquerytools.js"
-    />
-
-    <javascript
-        cacheable="True"
-        compression="safe"
-        conditionalcomment=""
-        cookable="True"
-        enabled="False"
-        expression=""
-        inline="False"
-        id="++resource++hexagonit.primacontrol.js/jquery.richmenu.js"
-    />
-
-    <javascript
-        authenticated="True"
-        cacheable="True"
-        compression="safe"
-        conditionalcomment=""
-        cookable="True"
-        enabled="True"
-        expression=""
-        inline="False"
-        id="++resource++hexagonit.primacontrol.js/descriptiontooltip.js"
-        insert-before="++resource++plone.app.jquerytools.js"
-    />
-
-    <javascript
-        authenticated="True"
-        cacheable="True"
-        compression="safe"
-        conditionalcomment=""
-        cookable="True"
-        enabled="True"
-        expression=""
-        inline="False"
-        id="++resource++hexagonit.primacontrol.js/portletoverlay.js"
-    />
-
-    <javascript
-        authenticated="True"
-        cacheable="True"
-        compression="safe"
-        conditionalcomment=""
-        cookable="True"
-        enabled="True"
-        expression=""
-        inline="False"
-        id="++resource++hexagonit.primacontrol.js/content_type.js"
-        insert-before="++resource++plone.app.jquerytools.js"
-    />
+    />-->
 
 </object>
