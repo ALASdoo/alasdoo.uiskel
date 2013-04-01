@@ -1,0 +1,8 @@
+[theme]
+title = ${namespace_package}.${package} theme
+description = Generated with alasdoo.uiskel
+doctype = <!doctype html>
+
+[theme:parameters]
+tabletleftcolumndown = python: True
+sidebarsright = python: False

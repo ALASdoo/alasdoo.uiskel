@@ -1,0 +1,23 @@
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <!-- Base rules - common to all themes -->
+    <xi:include href="rules_base.xml" />
+
+
+
+    <!-- THEME SPECIFIC RULES -->
+
+    <!-- Drop the favicon, we use our own -->
+    <!-- <drop content="/html/head/link[@rel='shortcut icon']" /> -->
+
+
+    <!-- Language chooser and quick links - not used by default -->
+    <drop css:theme="#quicklinks" />
+    <drop css:theme="#languages" />
+
+
+</rules>
