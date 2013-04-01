@@ -1,53 +1,50 @@
-from setuptools import setup, find_packages
+from setuptools import find_packages
+from setuptools import setup
 import os
 
-version = '1.0'
+
+def read(*rnames):
+    return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
+
 
 long_description = (
-    open('README.md').read()
-    + '\n' +
-    'Contributors\n'
-    '============\n'
-    + '\n' +
-    open('CONTRIBUTORS.txt').read()
-    + '\n' +
-    open('CHANGES.txt').read()
-    + '\n')
+    read('alasdoo', 'uiskel', 'docs', 'index.rst'))
 
-setup(name='alasdoo.uiskel',
-      version=version,
-      description="Paster template for Diazo theme development",
-      long_description=long_description,
-      # Get more strings from
-      # http://pypi.python.org/pypi?%3Aaction=list_classifiers
-      classifiers=["Environment :: Web Environment",
-                   "Framework :: Plone",
-                   "Operating System :: OS Independent",
-                   "Programming Language :: Python",
-                   "Programming Language :: Python :: 2.6",
-                   "Topic :: Software Development :: Libraries :: Python Modules",
-                   ],
-      keywords='',
-      author='Vilmos Somogyi - ALAS d.o.o.',
-      author_email='oss@alasdoo.com',
-      url='http://alasdoo.com/',
-      license='BSD',
-      packages=find_packages('alasdoo'),
-      namespace_packages=['alasdoo'],
-      include_package_data=True,
-      zip_safe=False,
-      install_requires=[
-          'PasteScript',
-          'ZopeSkel',
-          'setuptools',
-          # -*- Extra requirements: -*-
-      ],
-      extras_require={'test': ['plone.app.testing']},
-      entry_points="""
-      # -*- Entry points: -*-
-      [z3c.autoinclude.plugin]
-      diazo_theme = alasdoo.uiskel:PloneAppThemingTemplate
-      """,
-      setup_requires=["PasteScript"],
-      paster_plugins=["templer.localcommands"],
-      )
+setup(
+    name='alasdoo.uiskel',
+    version='1.0',
+    description="Paster template for plone.app.theming theme development",
+    long_description=long_description,
+    # Get more strings from
+    # http://pypi.python.org/pypi?:action=list_classifiers
+    classifiers=[
+        "Framework :: Plone",
+        "Framework :: Plone :: 4.1",
+        "Framework :: Plone :: 4.2",
+        "Programming Language :: Python",
+    ],
+    keywords='',
+    author='Vilmos Somogyi - ALAS d.o.o.',
+    author_email='oss@alasdoo.com',
+    url='http://alasdoo.com',
+    license='BSD',
+    packages=find_packages(exclude=['ez_setup']),
+    namespace_packages=['alasdoo'],
+    include_package_data=True,
+    zip_safe=False,
+    install_requires=[
+        'Cheetah<=2.2.1',
+        'Paste',
+        'PasteScript',
+        'ZopeSkel',
+        'hexagonit.testing',
+        'plone.testing',
+        'setuptools',
+        'unittest2',
+    ],
+    entry_points="""
+    # -*- Entry points: -*-
+    [paste.paster_create_template]
+    diazo_theme = alasdoo.uiskel:PloneAppThemingTemplate
+    """,
+)
