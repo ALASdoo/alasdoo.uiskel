@@ -1,6 +1,6 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:plone="http://namespaces.zope.org/plone"
+    xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:i18n="http://namespaces.zope.org/i18n"
 #if str($add_profile) == 'True'
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
