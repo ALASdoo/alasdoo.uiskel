@@ -1,0 +1,78 @@
+// LOGO
+// --------------------------
+
+#portal-logo {
+    display: inline-block;
+    margin: @portal-logo-margin;
+
+    img {
+        height: auto;
+        width: 100%;
+    }
+}
+.ie7 {
+    #portal-logo img {
+        width: auto;
+    }
+}
+
+
+// Personaltools
+// --------------------------
+
+#portal-personaltools {
+    background: @Personaltools-background;
+    position: absolute;
+    z-index: 3; /* personaltools should be above #portal-header (with z-index: 2) */
+    top: 0;
+    right: 0;
+    padding: 0.25em 0.5em;
+    margin: @Personaltools-margin;
+    .border-bottom-radius(0.5em);
+
+    a, a:link, a:hover, a:active, a:visited {
+        color: @Personaltools-link-color!important;
+    }
+
+    #anon-personalbar a {
+        float: left;
+        margin-right: 0.5em;
+    }
+}
+
+
+// Search and links
+// --------------------------
+
+#search-and-links {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+
+    #quicklinks, #languages {
+        font-size: @fontSizeMini;
+        margin: 5px 0;
+
+        li {
+            white-space: nowrap;
+        }
+    }
+    #languages li {
+        margin-right: 5px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    #portal-searchbox {
+        text-align: left;
+
+        form {
+            white-space: nowrap;
+        }
+        label {
+            // font-weight: @Portal-searchbox-label-font-weight;
+        }
+    }
+}

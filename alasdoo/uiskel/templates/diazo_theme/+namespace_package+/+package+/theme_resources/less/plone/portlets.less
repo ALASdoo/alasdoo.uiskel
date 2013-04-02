@@ -1,0 +1,324 @@
+// Portlets
+// --------------------------
+
+dl {
+    &.portlet {
+        background: @Portlet-background;
+        margin: 0 0 1em;
+        font-size: @Portlet-font-size;
+
+        dt {
+            color: @Portlet-header-color;
+            padding: 0.42em 1em;
+            background: @Portlet-header-background;
+            line-height: @Portlet-header-line-height;
+            text-transform: @Portlet-header-text-transform;
+
+            a {
+                &:link,
+                &:visited,
+                &:hover {
+                   color: @Portlet-header-color!important;
+                   display: block;
+                   border: none;
+                }
+            }
+            &.hiddenStructure {
+                padding: 0;
+            }
+        }
+        a {
+            text-decoration: none;
+
+            &:link {
+                color: @Portlet-link-color;
+                border-bottom: @Portlet-link-border-bottom;
+            }
+            &:visited {
+                color: @Portlet-link-visited-color;
+                border-bottom: @Portlet-link-visited-border-bottom;
+            }
+            &:hover {
+                color: @Portlet-link-hover-color !important; /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
+            }
+        }
+        dd {
+            &.portletItem,
+            &.portletFooter {
+                padding: @Portlet-item-padding;
+
+                p:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+        ol {
+            list-style-type: decimal;
+            margin-left: 2em;
+        }
+        li {
+            line-height: @Portlet-li-line-height;
+            display: list-item;
+        }
+        &.portletRss,
+        &.portletNews,
+        &.portletRecent,
+        &.portletCollection,
+        &.portletEventList,
+        &.portletPloneboardRecent {
+            .portletItemDetails {
+                display:inline;
+                color: @Portlet-rss-date-color!important;
+                font-size: @Portlet-rss-date-font-size;
+            }
+            .portletHeader {
+                margin-bottom: 13px;
+            }
+            .portletItem {
+                padding: 5px 13px;
+            }
+            .portletFooter {
+                text-align: right;
+            }
+        }
+        &.portletRecent,
+        &.portletCollection {
+            img {
+                display: none;
+            }
+        }
+        ul {
+            &.navTree {
+                li a {
+                    color: @Portlet-Navigation-color!important;
+                    background: none;
+                    border: none;
+                    display: block;
+                    padding: @Portlet-Navigation-Level0-padding!important;
+                    zoom: 1;
+
+                    img {
+                        display: none;
+                    }
+                }
+                .navTreeCurrentItem {
+                    background-color: @Portlet-Navigation-currentItem-background !important;
+                    color: @Portlet-Navigation-currentItem-color!important;
+                }
+            }
+            .navTreeItem {
+                padding: @Portlet-Navigation-item-padding;
+            }
+            &.navTreeLevel0 > .navTreeItem {
+                border-bottom: @Portlet-Navigation-Level0-border-bottom;
+                line-height: @Portlet-Navigation-Level0-line-height;
+                font-size: @Portlet-Navigation-Level0-font-size;
+                text-transform: @Portlet-Navigation-Level0-text-transform;
+            }
+            &.navTreeLevel1 .navTreeItem {
+                padding: @Portlet-Navigation-Level1-padding!important;
+                line-height: @Portlet-Navigation-Level1-line-height;
+                font-size: @Portlet-Navigation-Level1-font-size;
+                text-transform: @Portlet-Navigation-Level1-text-transform;
+                font-size: @Portlet-Navigation-Level1-font-size;
+
+                a {
+                    background: transparent url('../images/minus.gif') no-repeat 0 8px;
+                    margin-left:5px;
+                    border-left:none;
+                    padding-left: 12px !important;
+                }
+            }
+        }
+    }
+    &.portletError {
+        background-color: @Portlet-error-background;
+    }
+}
+
+div.portletAssignments {
+    div.portletHeader {
+        color: @EditBar-link-color;
+        padding: 0.42em 1em;
+        background: @EditBar-default-color;
+        line-height: @Portlet-header-line-height;
+
+        a, a:hover, a:active, a:link, a:visited {
+            color: @EditBar-link-color!important;
+            text-decoration: none;
+        }
+    }
+
+    font-size: @PortletAssignments-font-size;
+    line-height: @PortletAssignments-line-height;
+
+    .managedPortletActions {
+        float: right;
+
+        a {
+            margin: 0 0.25em;
+            border: none;
+            text-decoration: none;
+        }
+    }
+}
+
+dl.portletError dd {
+    padding: 1em;
+}
+
+.portlets-manager {
+    .portletAssignments {
+        border: 1px solid @EditBar-default-color;
+        padding: 0 5px;
+        margin: 10px 0;
+
+        h4 {
+            margin: 5px 0;
+        }
+        .formControls {
+            text-align: center;
+        }
+    }
+}
+
+div.managePortletsLink,
+a.managePortletsFallback {
+    text-align: center;
+    padding: 0.25em 0.5em;
+    font-size: @Portlet-managePortlets-font-size;
+    margin: 0 auto 1em;
+    background: @Portlet-managePortlets-background;
+    .rounded-corners(0.5em);
+
+    a, a:active, a:hover, a:visited, a:link {
+        color: @Portlet-managePortlets-color!important;
+    }
+}
+
+a, a:active, a:hover, a:visited, a:link {
+    &.managePortletsFallback {
+        color: @Portlet-managePortlets-color!important;
+    }
+}
+
+a.managePortletsFallback {
+    display:inline-block; /* in order for our vertical margins to work on inline element */
+}
+
+#content a.managePortletsFallback {
+    display: block;
+    border-bottom: none !important;
+}
+
+#portlet-prefs a {
+    border: none;
+    line-height: @Portlet-prefs-link-line-height;
+}
+
+#visual-portal-wrapper dl.portletCalendar dd {
+    padding: 0;
+}
+
+.managedPortlet {
+    margin: 0.8em 0;
+}
+
+.blockedPortlet {
+    .portletHeader {
+        background: @Portlet-blockedPortlet-background !important;
+        border: @Portlet-blockedPortlet-border;
+        margin: -1px;
+
+        a {
+            color: @Portlet-blockedPortlet-color;
+        }
+    }
+    .portletBlockedMessage {
+        color: @Portlet-blockedPortlet-color;
+        display: inline;
+    }
+}
+
+.portletCalendar {
+    margin: 1px 0 1em;
+    width: 100%;
+
+    dt {
+        background: @Portlet-Calendar-background;
+        border-bottom: medium none;
+        font-weight: @Portlet-Calendar-font-weight;
+        line-height: @Portlet-Calendar-line-height;
+        text-align: center;
+
+        a {
+            &#calendar-previous {
+                float: left;
+                margin: 0 -0.5em;
+                padding: 0 1em;
+            }
+            &#calendar-next {
+                float: right;
+                margin: 0 -0.5em;
+                padding: 0 1em;
+            }
+        }
+    }
+    dd {
+        margin: 0;
+        padding: 0;
+    }
+    a, a:focus, a:hover {
+        text-decoration: none;
+    }
+
+}
+
+.ploneCalendar {
+    border-spacing: 0;
+    width: 100%;
+
+    a {
+        border-bottom: medium none !important;
+        text-decoration: none;
+    }
+    td {
+        background-color: transparent;
+        padding: 2px;
+        text-align: center;
+        width: 14%;
+    }
+    .weekdays th {
+        background: @Portlet-Calendar-weekdays-background;
+        font-weight: @Portlet-Calendar-weekdays-font-weight;
+        padding: 2px;
+        text-align: center;
+    }
+    .event {
+        background: @Portlet-Calendar-event-background;
+        font-weight: @Portlet-Calendar-event-font-weight;
+    }
+    .todayevent {
+        background: @Portlet-Calendar-todayEvent-background;
+        border: @Portlet-Calendar-todayEvent-border;
+        font-weight: @Portlet-Calendar-todayEvent-font-weight;
+    }
+    .todaynoevent {
+        border: @Portlet-Calendar-todayNoEvent-border;
+    }
+}
+
+.portletItemDetails {
+    display: block;
+    font-size: @Portlet-ItemDetails-font-size;
+    line-height: @Portlet-ItemDetails-line-height;
+    margin-left: 5px;
+    padding-top: 0.5em;
+}
+
+#dashboard-portlets1,
+#dashboard-portlets2,
+#dashboard-portlets3,
+#dashboard-portlets4 {
+    display: inline-block;
+}

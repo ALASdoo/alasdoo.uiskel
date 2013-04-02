@@ -1,0 +1,43 @@
+// Live search
+// --------------------------
+
+#LSResult {
+    position: absolute;
+    right: 0;
+    background: @LiveSearch-background;
+    margin: -1.5em 0 0 -7em;
+    z-index: 1990;
+
+    fieldset {
+        padding: 1em 0 0;
+        border: @LiveSearch-border;
+    }
+    .LSDescr {
+        font-size: @LiveSearchDescription-font-size;
+        color: @LiveSearchDescription-color;
+    }
+    img {
+        display: none;
+    }
+}
+
+#livesearchLegend {
+    background-color: @LiveSearchLegend-background;
+    padding: 0.3em;
+}
+
+.livesearchContainer {
+    background: @LiveSearch-container-background;
+}
+
+.LSRow,
+#LSNothingFound {
+    display: block;
+    padding: 0.5em 1em;
+    white-space: normal;
+    width: 28em;
+}
+
+.LSHighlight {
+    background: @LiveSearchHighlight-background;
+}
