@@ -95,7 +95,7 @@
   <stylesheet
       enabled="False"
       expression="not:request/HTTP_X_THEME_ENABLED | nothing"
-      id="++resource++tinymce.stylesheets/tinymce.css"
+      id="ploneCustom.css"
       />
 
   <stylesheet
