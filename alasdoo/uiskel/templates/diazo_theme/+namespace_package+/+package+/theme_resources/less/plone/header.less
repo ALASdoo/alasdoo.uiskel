@@ -33,12 +33,37 @@
     a, a:link, a:hover, a:active, a:visited {
         color: @Personaltools-link-color!important;
     }
+    dt {
+        font-weight: normal;
+
+        &.actionMenuHeader a:after {
+            content: " ▼";
+        }
+    }
+    dd {
+        right: 0;
+        padding-top: 0.5em;
+        background: @Personaltools-background;
+        padding-bottom: 0.5em;
+
+        a {
+            line-height: @Personaltools-line-height;
+            padding: 0 0.75em;
+
+            &:hover {
+                background: @Personaltools-hover-background;
+                color: @Personaltools-hover-color;
+            }
+        }
+    }
 
     #anon-personalbar a {
         float: left;
         margin-right: 0.5em;
     }
 }
+
+
 
 
 // Search and links
@@ -71,8 +96,8 @@
         form {
             white-space: nowrap;
         }
-        label {
-            // font-weight: @Portal-searchbox-label-font-weight;
+        .searchField {
+            margin-bottom: 0;
         }
     }
 }

@@ -322,3 +322,75 @@ a.managePortletsFallback {
 #dashboard-portlets4 {
     display: inline-block;
 }
+
+/* @group Navigation portlet */
+
+dl.portlet ul {
+    &.navTree {
+        li a {
+            color: @Portlet-Navigation-color!important;
+            background: none;
+            border: none;
+            display: block;
+            padding: @Portlet-Navigation-Level0-padding!important;
+            zoom: 1;
+
+            img {
+                display: none;
+            }
+        }
+        .navTreeCurrentItem {
+            background-color: @Portlet-Navigation-currentItem-background !important;
+            color: @Portlet-Navigation-currentItem-color!important;
+        }
+    }
+    .navTreeItem {
+        padding: @Portlet-Navigation-item-padding;
+    }
+    &.navTreeLevel0 > .navTreeItem {
+        border-bottom: @Portlet-Navigation-Level0-border-bottom;
+        line-height: @Portlet-Navigation-Level0-line-height;
+        font-size: @Portlet-Navigation-Level0-font-size;
+        text-transform: @Portlet-Navigation-Level0-text-transform;
+    }
+    &.navTreeLevel1 .navTreeItem {
+        padding: @Portlet-Navigation-Level1-padding!important;
+        line-height: @Portlet-Navigation-Level1-line-height;
+        font-size: @Portlet-Navigation-Level1-font-size;
+        text-transform: @Portlet-Navigation-Level1-text-transform;
+        font-size: @Portlet-Navigation-Level1-font-size;
+
+        a {
+            background: transparent url('../images/minus.gif') no-repeat 0 8px;
+            margin-left:5px;
+            border-left:none;
+            padding-left: 12px !important;
+        }
+    }
+}
+dl.portletNavigationTree dd.portletItem {
+    padding: 0;
+}
+#formfield-form-root {
+    .widget fieldset div div {
+        padding: 5px;
+
+        &:hover {
+            background: @Table-odd-background;
+        }
+        input:last-child {
+            float: right;
+        }
+    }
+}
+#formfield-form-widgets-text .richTextWidget {
+    min-height: 759px;
+}
+
+.advanced-portlet-settings {
+    cursor: pointer;
+
+    &:before {
+        content: "» ";
+    }
+}

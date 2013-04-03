@@ -95,7 +95,7 @@
     <drop css:content=".searchSection" />
     <drop css:content="#portal-advanced-search" />
 
-    <after css:content="#portal-globalnav" css:theme="#search-and-links" />
+    <replace css:content="#portal-globalnav" css:theme-children=".navbar-inner" />
 
 
 

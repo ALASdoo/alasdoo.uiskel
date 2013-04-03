@@ -1,0 +1,176 @@
+#edit-bar {
+    background-color:@EditBar-background;
+    border: @EditBar-border;
+    min-height: 2em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    padding-top: 0.05em;
+    display: block;
+    border-style: solid solid none solid !important;
+
+    .border-top-radius(0.5em);
+}
+
+.actionSeparator {
+    #folderHeader,
+    #contextHeader {
+        .subMenuTitle{
+            color: @EditBar-subMenuTitle-color;
+        }
+    }
+}
+
+// TODO switch to bootstrap's dropdown
+dl.actionMenu {
+    float: right;
+    white-space: nowrap;
+    position: relative;
+    margin-left: 0.5em;
+
+    a, div {
+        display: block !important;
+        text-decoration:none;
+        white-space: nowrap;
+    }
+    dt {
+        font-weight: normal;
+    }
+    &.deactivated dt {
+        margin: 0 0.25em;
+    }
+    &.deactivated dd {
+        display: none;
+    }
+    &.activated {
+        dd {
+            position: absolute;
+            width: auto;
+            min-width: 100%;
+            .border-bottom-radius(0.5em);
+        }
+        dt a,
+        dd a,
+        dd div {
+            margin: 0 0.25em;
+        }
+    }
+}
+
+
+// #content {
+//     ul.formTabs {
+//         background-color: @FormTab-background;
+//         border: @FormTab-border;
+//         display: block;
+//         border-style: solid solid none solid;
+//         margin-left: 0;
+//         .border-top-radius(0.5em);
+//     }
+//     li.formTab {
+//         display: inline;
+//         margin-right:0.25em;
+
+//         a {
+//             /* this isn't supported by all browsers, so we keep it in a separate rule */
+//             display: inline-block;
+//             line-height: @FormTab-link-line-height;
+//             padding: @FormTab-link-padding;
+//             text-decoration: none;
+//             border: none;
+//             margin: 0 ;
+
+//             &.selected {
+//                 font-weight: @FormTab-link-selected-font-weight;
+//                 background: @FormTab-link-selected-background;
+//                 color: @FormTab-link-selected-color;
+//                 .border-top-radius(0.5em);
+//             }
+//             &:hover {
+//                 background: @FormTab-link-hover-background;
+//                 color: @FormTab-link-hover-color;
+//                 .border-top-radius(0.5em);
+//             }
+//             &.notify {
+//                 background-color: @FormTab-link-notify-background;
+//                 color: @FormTab-link-notify-color;
+//             }
+//             &.required span:after {
+//                 content: "■";
+//                 color: Red;
+//                 padding-left: 0.2em;
+//             }
+//         }
+//     }
+//     fieldset.formPanel {
+//         border: none;
+
+//         &.hidden {
+//             display: none;
+//         }
+//     }
+//     div.formControls input.hidden {
+//         display: none;
+//     }
+// }
+
+#content-views {
+    float: left;
+    background-color: @EditBar-background;
+
+    a {
+        /* this isn't supported by all browsers, so we keep it in a separate rule */
+        display: inline-block;
+        color: @EditBar-color;
+        line-height: @EditBar-line-height;
+        padding: 0 0.75em;
+        text-decoration: none;
+        border: none;
+        margin: 0 ;
+    }
+    li.selected a {
+        font-weight: @EditBar-selected-font-weight;
+        background: @EditBar-selected-background;
+        color: @EditBar-selected-color;
+        .border-top-radius(0.5em);
+    }
+    li a:hover {
+        background: @EditBar-hover-background;
+        color: @EditBar-hover-color;
+        .border-top-radius(0.5em);
+    }
+}
+
+
+// Workflow Pull-down menu state indicators
+// -----------------------------------------------------
+
+#plone-contentmenu-workflow {
+    .state-private {
+        padding: 0 0.5em;
+        background-color: @workflow-state-private;
+        border: 0.1em solid @workflow-state-private;
+        color: @workflow-state-private-color !important;
+        .border-radius(0.5em);
+    }
+    .state-visible {
+        padding: 0 0.5em;
+        background-color: @workflow-state-visible;
+        border: 0.1em solid @workflow-state-visible;
+        color: @workflow-state-visible-color !important;
+        .border-radius(0.5em);
+    }
+    .state-published {
+        padding: 0 0.5em;
+        background-color: @workflow-state-published;
+        border: 0.1em solid @workflow-state-published;
+        color: @workflow-state-published-color !important;
+        .border-radius(0.5em);
+    }
+    .state-pending {
+        padding: 0 0.5em;
+        background-color: @workflow-state-pending;
+        border: 0.1em solid @workflow-state-pending;
+        color: @workflow-state-pending-color !important;
+        .border-radius(0.5em);
+    }
+}
