@@ -188,6 +188,8 @@
 
     <!-- FOOTER -->
 
-    <copy css:content-children="#footer-colophon" css:theme="#footer-colophon" />
+    <replace css:content="#portal-footer" css:theme="#portal-footer" />
+    <replace css:content="#portal-colophon" css:theme="#portal-colophon" />
+    <replace css:content="#portal-siteactions" css:theme="#portal-siteactions" />
 
 </rules>
