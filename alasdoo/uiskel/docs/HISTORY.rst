@@ -4,6 +4,7 @@ Changelog
 1.0rc1 (2013-04-01)
 -------------------
 
+- Alerts styled [vsomogyi]
 - Breadcrumbs styled [vsomogyi]
 - Edit bar styled [vsomogyi]
 - Menu styled [vsomogyi]

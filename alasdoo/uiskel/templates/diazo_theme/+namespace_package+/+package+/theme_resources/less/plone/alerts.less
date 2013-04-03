@@ -1,0 +1,29 @@
+//
+// Alerts
+// --------------------------------------------------
+
+.portalMessage {
+    color: @infoText;
+    padding: 8px 35px 8px 14px;
+    margin-bottom: @baseLineHeight;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    background-color: @infoBackground;
+    border: 1px solid @infoBorder;
+    .border-radius(@baseBorderRadius);
+
+    dt, dd {
+        display: inline;
+    }
+
+    // Alternate styles
+    &.error {
+        background-color: @errorBackground;
+        border-color: @errorBorder;
+        color: @errorText;
+    }
+    &.warning {
+        background-color: @warningBackground;
+        border-color: @warningBorder;
+        color: @warningText;
+    }
+}
