@@ -1,42 +1,72 @@
+//
+// Edit bar
+// --------------------------------------------------
+
 #edit-bar {
-    background-color:@EditBar-background;
-    border: @EditBar-border;
-    min-height: 2em;
-    margin-bottom: 1em;
+    border-bottom: 1px solid #ddd; // Give the tabs something to sit on
     margin-left: 0;
-    padding-top: 0.05em;
-    display: block;
-    border-style: solid solid none solid !important;
+    margin-bottom: @baseLineHeight;
+    .clearfix();
 
-    .border-top-radius(0.5em);
-}
+    .contentViews,
+    #contentActionMenus {
+        list-style: none;
+        margin-bottom: 0;
 
-.actionSeparator {
-    #folderHeader,
-    #contextHeader {
-        .subMenuTitle{
-            color: @EditBar-subMenuTitle-color;
+        > li {
+            float: left;
+            margin-bottom: -1px; // Make the list-items overlay the bottom border
+
+            a {
+                display: block;
+                padding-right: 12px;
+                padding-left: 12px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                line-height: @baseLineHeight;
+                border: 1px solid transparent;
+                .border-radius(4px 4px 0 0);
+
+                margin-right: 2px;
+
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                    background-color: @grayLighter;
+                    border-color: @grayLighter @grayLighter #ddd;
+                }
+                > img {
+                    max-width: none; // Prevent IE8 from misplacing imgs
+                }
+            }
         }
+        .selected {
+            a, a:hover, a:focus {
+                color: @gray;
+                background-color: @bodyBackground;
+                border: 1px solid #ddd;
+                border-bottom-color: transparent;
+                cursor: default;
+            }
+        }
+    }
+    #contentActionMenus > li {
+        float: right;
     }
 }
 
-// TODO switch to bootstrap's dropdown
-dl.actionMenu {
-    float: right;
+.actionMenu {
     white-space: nowrap;
     position: relative;
-    margin-left: 0.5em;
+    margin-bottom: 0;
 
     a, div {
         display: block !important;
-        text-decoration:none;
+        text-decoration: none;
         white-space: nowrap;
     }
     dt {
         font-weight: normal;
-    }
-    &.deactivated dt {
-        margin: 0 0.25em;
     }
     &.deactivated dd {
         display: none;
@@ -44,17 +74,53 @@ dl.actionMenu {
     &.activated {
         dd {
             position: absolute;
-            width: auto;
-            min-width: 100%;
-            .border-bottom-radius(0.5em);
+            top: 100%;
+            left: 0;
+            z-index: @zindexDropdown;
+            float: left;
+            min-width: 160px;
+            padding: 5px 0;
+            margin: 2px 0 0; // override default ul
+            background-color: @dropdownBackground;
+            border: 1px solid #ccc; // Fallback for IE7-8
+            border: 1px solid @dropdownBorder;
+            *border-right-width: 2px;
+            *border-bottom-width: 2px;
+            .border-radius(6px);
+            .box-shadow(0 5px 10px rgba(0,0,0,.2));
+            -webkit-background-clip: padding-box;
+               -moz-background-clip: padding;
+                    background-clip: padding-box;
+
+            ul {
+                list-style: none;
+                margin-left: 0;
+
+                #folderDefaultPageDisplay {
+                    padding: 0 12px;
+                }
+                a {
+                    margin-right: 0 !important;
+                }
+            }
         }
-        dt a,
-        dd a,
-        dd div {
-            margin: 0 0.25em;
+        &#plone-contentmenu-workflow dd {
+            right: 0;
+            left: auto;
         }
     }
 }
+
+
+
+// .actionSeparator {
+//     #folderHeader,
+//     #contextHeader {
+//         .subMenuTitle{
+//             color: @EditBar-subMenuTitle-color;
+//         }
+//     }
+// }
 
 
 // #content {
@@ -113,32 +179,32 @@ dl.actionMenu {
 //     }
 // }
 
-#content-views {
-    float: left;
-    background-color: @EditBar-background;
+// #content-views {
+//     float: left;
+//     background-color: @EditBar-background;
 
-    a {
-        /* this isn't supported by all browsers, so we keep it in a separate rule */
-        display: inline-block;
-        color: @EditBar-color;
-        line-height: @EditBar-line-height;
-        padding: 0 0.75em;
-        text-decoration: none;
-        border: none;
-        margin: 0 ;
-    }
-    li.selected a {
-        font-weight: @EditBar-selected-font-weight;
-        background: @EditBar-selected-background;
-        color: @EditBar-selected-color;
-        .border-top-radius(0.5em);
-    }
-    li a:hover {
-        background: @EditBar-hover-background;
-        color: @EditBar-hover-color;
-        .border-top-radius(0.5em);
-    }
-}
+//     a {
+//         /* this isn't supported by all browsers, so we keep it in a separate rule */
+//         display: inline-block;
+//         color: @EditBar-color;
+//         line-height: @EditBar-line-height;
+//         padding: 0 0.75em;
+//         text-decoration: none;
+//         border: none;
+//         margin: 0 ;
+//     }
+//     li.selected a {
+//         font-weight: @EditBar-selected-font-weight;
+//         background: @EditBar-selected-background;
+//         color: @EditBar-selected-color;
+//         .border-top-radius(0.5em);
+//     }
+//     li a:hover {
+//         background: @EditBar-hover-background;
+//         color: @EditBar-hover-color;
+//         .border-top-radius(0.5em);
+//     }
+// }
 
 
 // Workflow Pull-down menu state indicators

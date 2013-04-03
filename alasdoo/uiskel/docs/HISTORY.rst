@@ -4,6 +4,7 @@ Changelog
 1.0rc1 (2013-04-01)
 -------------------
 
+- Edit bar styled [vsomogyi]
 - Menu styled [vsomogyi]
 - Less files added based on html5boilerplate (v.4.1.0), twitter bootstrap
   (v.2.3.1) and hexagonit.themeskel (v.2.1.1) [vsomogyi]

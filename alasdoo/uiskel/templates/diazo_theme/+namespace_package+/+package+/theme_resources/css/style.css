@@ -4615,7 +4615,7 @@ body {
 }
 #portal-logo {
   display: inline-block;
-  margin: 20px 0 0;
+  margin: 20px 0 10px 0;
 }
 #portal-logo img {
   height: auto;
@@ -4625,7 +4625,7 @@ body {
   width: auto;
 }
 #portal-personaltools {
-  background: #999999;
+  background: #eeeeee;
   position: absolute;
   z-index: 3;
   /* personaltools should be above #portal-header (with z-index: 2) */
@@ -4657,7 +4657,7 @@ body {
 #portal-personaltools dd {
   right: 0;
   padding-top: 0.5em;
-  background: #999999;
+  background: #eeeeee;
   padding-bottom: 0.5em;
 }
 #portal-personaltools dd a {
@@ -4665,7 +4665,7 @@ body {
   padding: 0 0.75em;
 }
 #portal-personaltools dd a:hover {
-  background: #e5e5e5;
+  background: #ffffff;
   color: inherit;
 }
 #portal-personaltools #anon-personalbar a {
@@ -4870,97 +4870,125 @@ body {
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
 }
 #edit-bar {
-  background-color: #999999;
-  border: 0.25em solid #999999;
-  min-height: 2em;
-  margin-bottom: 1em;
+  border-bottom: 1px solid #ddd;
   margin-left: 0;
-  padding-top: 0.05em;
+  margin-bottom: 20px;
+  *zoom: 1;
+}
+#edit-bar:before,
+#edit-bar:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+#edit-bar:after {
+  clear: both;
+}
+#edit-bar .contentViews,
+#edit-bar #contentActionMenus {
+  list-style: none;
+  margin-bottom: 0;
+}
+#edit-bar .contentViews > li,
+#edit-bar #contentActionMenus > li {
+  float: left;
+  margin-bottom: -1px;
+}
+#edit-bar .contentViews > li a,
+#edit-bar #contentActionMenus > li a {
   display: block;
-  border-style: solid solid none solid !important;
-  -webkit-border-top-right-radius: 0.5em;
-  -moz-border-radius-topright: 0.5em;
-  border-top-right-radius: 0.5em;
-  -webkit-border-top-left-radius: 0.5em;
-  -moz-border-radius-topleft: 0.5em;
-  border-top-left-radius: 0.5em;
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: 20px;
+  border: 1px solid transparent;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+  margin-right: 2px;
 }
-.actionSeparator #folderHeader .subMenuTitle,
-.actionSeparator #contextHeader .subMenuTitle {
-  color: #ffffff;
+#edit-bar .contentViews > li a:hover,
+#edit-bar #contentActionMenus > li a:hover,
+#edit-bar .contentViews > li a:focus,
+#edit-bar #contentActionMenus > li a:focus {
+  text-decoration: none;
+  background-color: #eeeeee;
+  border-color: #eeeeee #eeeeee #dddddd;
 }
-dl.actionMenu {
+#edit-bar .contentViews > li a > img,
+#edit-bar #contentActionMenus > li a > img {
+  max-width: none;
+}
+#edit-bar .contentViews .selected a,
+#edit-bar #contentActionMenus .selected a,
+#edit-bar .contentViews .selected a:hover,
+#edit-bar #contentActionMenus .selected a:hover,
+#edit-bar .contentViews .selected a:focus,
+#edit-bar #contentActionMenus .selected a:focus {
+  color: #555555;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+#edit-bar #contentActionMenus > li {
   float: right;
+}
+.actionMenu {
   white-space: nowrap;
   position: relative;
-  margin-left: 0.5em;
+  margin-bottom: 0;
 }
-dl.actionMenu a,
-dl.actionMenu div {
+.actionMenu a,
+.actionMenu div {
   display: block !important;
   text-decoration: none;
   white-space: nowrap;
 }
-dl.actionMenu dt {
+.actionMenu dt {
   font-weight: normal;
 }
-dl.actionMenu.deactivated dt {
-  margin: 0 0.25em;
-}
-dl.actionMenu.deactivated dd {
+.actionMenu.deactivated dd {
   display: none;
 }
-dl.actionMenu.activated dd {
+.actionMenu.activated dd {
   position: absolute;
-  width: auto;
-  min-width: 100%;
-  -webkit-border-bottom-right-radius: 0.5em;
-  -moz-border-radius-bottomright: 0.5em;
-  border-bottom-right-radius: 0.5em;
-  -webkit-border-bottom-left-radius: 0.5em;
-  -moz-border-radius-bottomleft: 0.5em;
-  border-bottom-left-radius: 0.5em;
-}
-dl.actionMenu.activated dt a,
-dl.actionMenu.activated dd a,
-dl.actionMenu.activated dd div {
-  margin: 0 0.25em;
-}
-#content-views {
+  top: 100%;
+  left: 0;
+  z-index: 1000;
   float: left;
-  background-color: #999999;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
 }
-#content-views a {
-  /* this isn't supported by all browsers, so we keep it in a separate rule */
-
-  display: inline-block;
-  color: #666666;
-  line-height: 2em;
-  padding: 0 0.75em;
-  text-decoration: none;
-  border: none;
-  margin: 0 ;
+.actionMenu.activated dd ul {
+  list-style: none;
+  margin-left: 0;
 }
-#content-views li.selected a {
-  font-weight: bold;
-  background: #ffffff;
-  color: #333333;
-  -webkit-border-top-right-radius: 0.5em;
-  -moz-border-radius-topright: 0.5em;
-  border-top-right-radius: 0.5em;
-  -webkit-border-top-left-radius: 0.5em;
-  -moz-border-radius-topleft: 0.5em;
-  border-top-left-radius: 0.5em;
+.actionMenu.activated dd ul #folderDefaultPageDisplay {
+  padding: 0 12px;
 }
-#content-views li a:hover {
-  background: #ffffff;
-  color: #333333;
-  -webkit-border-top-right-radius: 0.5em;
-  -moz-border-radius-topright: 0.5em;
-  border-top-right-radius: 0.5em;
-  -webkit-border-top-left-radius: 0.5em;
-  -moz-border-radius-topleft: 0.5em;
-  border-top-left-radius: 0.5em;
+.actionMenu.activated dd ul a {
+  margin-right: 0 !important;
+}
+.actionMenu.activated#plone-contentmenu-workflow dd {
+  right: 0;
+  left: auto;
 }
 #plone-contentmenu-workflow .state-private {
   padding: 0 0.5em;
