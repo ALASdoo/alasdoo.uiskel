@@ -4,6 +4,7 @@ Changelog
 1.0rc1 (2013-04-XX)
 -------------------
 
+- Overlay styling [vsomogyi]
 - Form styling [vsomogyi]
 - Footer styled [vsomogyi]
 - Alerts styled [vsomogyi]

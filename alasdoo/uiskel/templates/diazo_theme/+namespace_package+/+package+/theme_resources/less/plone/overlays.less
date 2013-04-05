@@ -1,0 +1,53 @@
+//
+// Overlays
+// --------------------------------------------------
+
+.overlay {
+    background-color: @white;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.3);
+    *border: 1px solid #999; /* IE6-7 */
+    .border-radius(6px);
+    .box-shadow(0 3px 7px rgba(0,0,0,0.3));
+    .background-clip(padding-box);
+    // Remove focus outline from opened modal
+    outline: none;
+
+    width: auto;
+    height: auto;
+    /* initially overlay is hidden */
+    display: none;
+    /* some padding to layout nested elements nicely  */
+    padding: 15px;
+
+    .close {
+        background-image: url('../images/pb_close.png');
+        position: absolute;
+        left: -14px;
+        top: -14px;
+        cursor: pointer;
+        height: 30px;
+        width: 30px;
+        opacity: 1;
+
+        span {
+            display: block;
+            height: 1px;
+            margin: -1px 0 0 -1px;
+            overflow: hidden;
+            padding: 0;
+            width: 1px;
+        }
+    }
+}
+
+.overlay-ajax,
+.overlay-iframe {
+    width: 60%;
+    min-height: 100px;
+    z-index: 2500; /* overlays should be above everything */
+}
+
+.overlay-iframe {
+    height: 60%;
+}
