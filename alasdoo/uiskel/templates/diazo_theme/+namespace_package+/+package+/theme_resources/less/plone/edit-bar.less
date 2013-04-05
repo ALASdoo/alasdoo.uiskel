@@ -2,58 +2,73 @@
 // Edit bar
 // --------------------------------------------------
 
-#edit-bar {
+#edit-bar,
+.formTabs {
     border-bottom: 1px solid #ddd; // Give the tabs something to sit on
     margin-left: 0;
-    margin-bottom: @baseLineHeight;
     .clearfix();
+}
 
-    .contentViews,
-    #contentActionMenus {
-        list-style: none;
-        margin-bottom: 0;
+.contentViews,
+#contentActionMenus,
+.formTabs {
+    list-style: none;
+    margin-bottom: 0;
 
-        > li {
-            float: left;
-            margin-bottom: -1px; // Make the list-items overlay the bottom border
+    > li {
+        float: left;
+        margin-bottom: -1px; // Make the list-items overlay the bottom border
 
-            a {
-                display: block;
-                padding-right: 12px;
-                padding-left: 12px;
-                padding-top: 8px;
-                padding-bottom: 8px;
-                line-height: @baseLineHeight;
-                border: 1px solid transparent;
-                .border-radius(4px 4px 0 0);
+        a {
+            display: block;
+            padding-right: 12px;
+            padding-left: 12px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            line-height: @baseLineHeight;
+            border: 1px solid transparent;
+            .border-radius(4px 4px 0 0);
 
-                margin-right: 2px;
+            margin-right: 2px;
 
-                &:hover,
-                &:focus {
-                    text-decoration: none;
-                    background-color: @grayLighter;
-                    border-color: @grayLighter @grayLighter #ddd;
-                }
-                > img {
-                    max-width: none; // Prevent IE8 from misplacing imgs
-                }
+            &:hover {
+                text-decoration: none;
+                background-color: @grayLighter;
+                border-color: @grayLighter @grayLighter #ddd;
             }
-        }
-        .selected {
-            a, a:hover, a:focus {
-                color: @gray;
-                background-color: @bodyBackground;
-                border: 1px solid #ddd;
-                border-bottom-color: transparent;
-                cursor: default;
+            > img {
+                max-width: none; // Prevent IE8 from misplacing imgs
             }
         }
     }
-    #contentActionMenus > li {
-        float: right;
+    .selected {
+        a, a:hover {
+            color: @gray;
+            background-color: @bodyBackground;
+            border: 1px solid #ddd;
+            border-bottom-color: transparent;
+            cursor: default;
+        }
     }
 }
+
+.formTabs {
+    margin-bottom: @baseLineHeight;
+
+    .selected, .selected:hover {
+        color: @gray;
+        background-color: @bodyBackground;
+        border: 1px solid #ddd;
+        border-bottom-color: transparent;
+        cursor: default;
+        text-decoration: none;
+    }
+}
+
+#contentActionMenus > li {
+    float: right;
+}
+
 
 .actionMenu {
     white-space: nowrap;
@@ -96,9 +111,6 @@
                 list-style: none;
                 margin-left: 0;
 
-                #folderDefaultPageDisplay {
-                    padding: 0 12px;
-                }
                 a {
                     margin-right: 0 !important;
                 }
@@ -111,7 +123,12 @@
     }
 }
 
-
+.actionSeparator > div {
+    background: none repeat scroll 0 0 #F5F5F5;
+    border-bottom: 1px solid #DDDDDD;
+    padding: 5px 0;
+    text-align: center;
+}
 
 // .actionSeparator {
 //     #folderHeader,

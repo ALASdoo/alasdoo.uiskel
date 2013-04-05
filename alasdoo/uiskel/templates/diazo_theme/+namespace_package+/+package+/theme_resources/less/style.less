@@ -19,7 +19,7 @@
 @import "bootstrap/type.less";
 @import "bootstrap/code.less";
 @import "bootstrap/forms.less";
-@import "bootstrap/tables.less";
+// @import "bootstrap/tables.less";
 
 // Components: common
 @import "bootstrap/sprites.less";
@@ -29,7 +29,7 @@
 @import "bootstrap/close.less";
 
 // Components: Buttons & Alerts
-@import "bootstrap/buttons.less"; // <- slightly modified. rethink!
+@import "bootstrap/buttons.less";
 @import "bootstrap/button-groups.less";
 // @import "bootstrap/alerts.less";
 
@@ -47,7 +47,7 @@
 // Components: Misc
 @import "bootstrap/thumbnails.less";
 @import "bootstrap/media.less";
-@import "bootstrap/labels-badges.less";
+@import "bootstrap/labels-badges.less"; // <- label renamed to lbl (Plone uses label class)
 @import "bootstrap/progress-bars.less";
 @import "bootstrap/accordion.less";
 @import "bootstrap/carousel.less";
@@ -59,6 +59,8 @@
 
 // Base CSS
 @import "plone/type.less";
+@import "plone/tables.less";
+@import "plone/forms.less";
 
 // Grid system and page structure
 @import "plone/scaffolding.less";
@@ -72,6 +74,7 @@
 @import "plone/edit-bar.less";
 @import "plone/breadcrumbs.less";
 @import "plone/alerts.less";
+@import "plone/buttons.less";
 // @import "plone/portlets.less";
 @import "plone/tag-cloud.less";
 @import "plone/footer.less";

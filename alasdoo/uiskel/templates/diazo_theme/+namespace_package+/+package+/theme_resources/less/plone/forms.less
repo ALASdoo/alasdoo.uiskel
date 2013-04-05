@@ -1,0 +1,106 @@
+//
+// Forms
+// --------------------------------------------------
+
+
+// Shared size and type resets
+
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    margin-bottom: 0;
+}
+
+textarea,
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    height: @baseLineHeight + 8px;
+    .box-sizing(border-box);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 5px 0;
+}
+
+textarea {
+    height: auto;
+    resize: vertical;
+}
+
+// Add space between fields
+.field {
+    margin-top: 10px;
+}
+
+// Search fields should not be full width
+input[type="text"].searchField {
+    width: auto;
+    margin-bottom: 0;
+}
+
+// Edit page - title font style
+#content .field input[type="text"][name$=".title"],
+#archetypes-fieldname-title input {
+    font-size: @fontSizeHuge;
+    font-weight: @headingsFontWeight;
+    height: @fontSizeHuge + 12px;
+}
+
+// Plone's JSCalendar component field sizes shouldn't be changed
+.plone_jscalendar select {
+    width: auto;
+}
+
+// TinyMCE hacks
+body.mceContentBody {
+    padding: 15px;
+    .box-sizing(border-box);
+}
+.suppressVisualEditor {
+    a {
+        border-bottom: 0 none !important;
+        display: block;
+        font-size: 11px;
+        margin-bottom: 20px;
+        margin-left: 5px;
+        margin-top: -22px;
+    }
+}
+
+
+// FORM CONTROLS
+// -------------
+
+.formControls {
+    margin-top: @baseLineHeight;
+}
+
+
+// FORM FIELD FEEDBACK STATES
+// --------------------------
+
+// Error
+.error {
+    .formFieldState(@errorText, @errorText, @errorBackground);
+}

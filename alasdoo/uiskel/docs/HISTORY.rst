@@ -1,9 +1,10 @@
 Changelog
 =========
 
-1.0rc1 (2013-04-01)
+1.0rc1 (2013-04-XX)
 -------------------
 
+- Form styling [vsomogyi]
 - Footer styled [vsomogyi]
 - Alerts styled [vsomogyi]
 - Breadcrumbs styled [vsomogyi]
