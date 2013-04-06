@@ -4014,6 +4014,21 @@ body.mceContentBody {
   margin-left: 5px;
   margin-top: -22px;
 }
+.queryindex,
+.addIndex {
+  clear: both;
+}
+.criteria {
+  position: relative;
+}
+.criteria .removecriteria {
+  border: 0 !important;
+  color: #999999 !important;
+  font-size: 11.9px !important;
+  position: absolute;
+  right: 0;
+  top: 25px;
+}
 .formControls {
   margin-top: 20px;
 }
@@ -4649,6 +4664,38 @@ footer {
   cursor: default;
   text-decoration: none;
 }
+.contentActions {
+  position: relative;
+  background: transparent url('../images/glyphicons-halflings.png') no-repeat -432px 0;
+  float: right;
+  width: 15px;
+  height: 15px;
+  margin-top: 15px;
+}
+.contentActions:hover #contentActionMenus {
+  display: block;
+}
+#contentActionMenus {
+  display: none;
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid #DDD;
+  right: 0;
+  width: 385px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear .2s, box-shadow linear .2s;
+  -moz-transition: border linear .2s, box-shadow linear .2s;
+  -o-transition: border linear .2s, box-shadow linear .2s;
+  transition: border linear .2s, box-shadow linear .2s;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+}
 #contentActionMenus > li {
   float: right;
 }
@@ -4677,7 +4724,7 @@ footer {
   float: left;
   min-width: 160px;
   padding: 5px 0;
-  margin: 2px 0 0;
+  margin: 0;
   background-color: #ffffff;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -4986,13 +5033,25 @@ input[type="button"]::-moz-focus-inner {
 }
 .portlet {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .portlet a:hover {
   text-decoration: none;
 }
+.portlet a .portletItemDetails {
+  color: #999999;
+  font-size: 11.9px;
+}
+.portlet .portletHeader {
+  font-family: inherit;
+}
 .portlet .portletItem {
+  margin: 5px 0;
+}
+.portlet .portletFooter {
   margin-left: 0;
+  text-align: center;
+  font-size: 11.9px;
 }
 .portletNavigationTree .portletHeader {
   display: block;
@@ -5061,6 +5120,37 @@ input[type="button"]::-moz-focus-inner {
 }
 .portletNavigationTree .portletItem .navTreeLevel0 .navTree .navTreeCurrentItem {
   color: #555555;
+}
+.portletCalendar {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  text-align: center;
+}
+.portletCalendar .portletHeader {
+  font-size: 17.5px;
+  margin-bottom: 15px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.portletCalendar .ploneCalendar {
+  width: 100%;
+}
+.portletCalendar .calendarPrevious {
+  float: left;
+  margin-left: 5px;
+}
+.portletCalendar .calendarNext {
+  float: right;
+  margin-right: 5px;
+}
+.portletCalendar .weekdays {
+  font-size: 11.9px;
+}
+.portletCalendar .event,
+.portletCalendar .todayevent {
+  background-color: #eeeeee;
 }
 .portlets-manager .portletAssignments {
   border: 1px solid #ddd;

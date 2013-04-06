@@ -4,20 +4,31 @@
 
 .portlet {
     margin-top: 0;
-    margin-bottom: @baseLineHeight;
+    margin-bottom: @baseLineHeight + 10px;
 
     a:hover {
         text-decoration: none;
     }
+    a .portletItemDetails {
+        color: @grayLight;
+        font-size: @fontSizeSmall;
+    }
     .portletHeader {
-
+        font-family: @headingsFontFamily;
     }
     .portletItem {
+        margin: 5px 0;
+    }
+    .portletFooter {
         margin-left: 0;
+        text-align: center;
+        font-size: @fontSizeSmall;
     }
 }
 
+
 // Navigation portlet
+// --------------------------------
 .portletNavigationTree {
     .portletHeader {
         display: block;
@@ -87,6 +98,39 @@
             }
 
         }
+    }
+}
+
+
+// Calendar portlet
+// --------------------------------
+.portletCalendar {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    .border-radius(4px);
+    text-align: center;
+
+    .portletHeader {
+        font-size: @fontSizeLarge;
+        margin-bottom: 15px;
+        text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    }
+    .ploneCalendar {
+        width: 100%;
+    }
+    .calendarPrevious {
+        float: left;
+        margin-left: 5px;
+    }
+    .calendarNext {
+        float: right;
+        margin-right: 5px;
+    }
+    .weekdays {
+        font-size: @fontSizeSmall;
+    }
+    .event, .todayevent {
+        background-color: @grayLighter;
     }
 }
 
