@@ -4991,6 +4991,9 @@ input[type="button"]::-moz-focus-inner {
 .portlet a:hover {
   text-decoration: none;
 }
+.portlet .portletItem {
+  margin-left: 0;
+}
 .portletNavigationTree .portletHeader {
   display: block;
   padding: 3px 15px;
@@ -5058,6 +5061,51 @@ input[type="button"]::-moz-focus-inner {
 }
 .portletNavigationTree .portletItem .navTreeLevel0 .navTree .navTreeCurrentItem {
   color: #555555;
+}
+.portlets-manager .portletAssignments {
+  border: 1px solid #ddd;
+  padding: 5px 15px;
+  margin: 10px 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.portlets-manager .portletAssignments h4 {
+  margin: 5px 0;
+}
+.portlets-manager .portletAssignments .formControls {
+  text-align: center;
+}
+.portletAssignments .portletHeader {
+  padding: 0.42em 1em;
+  background: #eeeeee;
+}
+.portletAssignments .managedPortlet {
+  margin: 10px 0;
+}
+.portletAssignments .managedPortletActions {
+  float: right;
+}
+.portletAssignments .managedPortletActions a {
+  margin: 0 0.25em;
+  border: none;
+  text-decoration: none;
+}
+.blockedPortlet .portletHeader {
+  background: #ffffff;
+  border: 1px dashed #ddd;
+  margin: -1px;
+}
+.blockedPortlet .portletHeader a {
+  color: #999999;
+}
+.managePortletsLink a {
+  display: block;
+  border-top: 1px solid #ddd;
+  color: #999999;
+  font-size: 11.9px;
+  text-align: center;
+  padding: 5px;
 }
 .cloud1 {
   font-size: 1em;
