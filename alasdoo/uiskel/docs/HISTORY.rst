@@ -4,6 +4,7 @@ Changelog
 1.0rc1 (2013-04-XX)
 -------------------
 
+- Navigation portlet styling [vsomogyi]
 - Overlay styling [vsomogyi]
 - Form styling [vsomogyi]
 - Footer styled [vsomogyi]

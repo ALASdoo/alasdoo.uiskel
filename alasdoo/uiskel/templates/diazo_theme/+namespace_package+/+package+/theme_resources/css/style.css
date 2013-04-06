@@ -4325,13 +4325,6 @@ footer {
   display: inline-block;
   margin: 20px 0 10px 0;
 }
-#portal-logo img {
-  height: auto;
-  width: 100%;
-}
-.ie7 #portal-logo img {
-  width: auto;
-}
 #portal-personaltools {
   background: #eeeeee;
   position: absolute;
@@ -4990,6 +4983,81 @@ input[type="submit"]::-moz-focus-inner,
 input[type="button"]::-moz-focus-inner {
   padding: 0;
   border: 0;
+}
+.portlet {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.portlet a:hover {
+  text-decoration: none;
+}
+.portletNavigationTree .portletHeader {
+  display: block;
+  padding: 3px 15px;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #999999;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+.portletNavigationTree .portletItem .navTreeLevel0 {
+  margin-left: 0;
+  list-style: none;
+}
+.portletNavigationTree .portletItem .navTreeLevel0 > li {
+  margin-bottom: -1px;
+  border: 1px solid #ddd;
+}
+.portletNavigationTree .portletItem .navTreeLevel0 > li:hover {
+  background-color: #eeeeee;
+  border-color: #ddd;
+  z-index: 2;
+}
+.portletNavigationTree .portletItem .navTreeLevel0 > li:first-child {
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  border-top-right-radius: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  border-top-left-radius: 4px;
+}
+.portletNavigationTree .portletItem .navTreeLevel0 > li:last-child {
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-bottom-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-bottom-left-radius: 4px;
+}
+.portletNavigationTree .portletItem .navTreeLevel0 > li > a,
+.portletNavigationTree .portletItem .navTreeLevel0 > li > div > a {
+  display: block;
+  padding: 8px 12px;
+  line-height: 20px;
+}
+.portletNavigationTree .portletItem .navTreeLevel0 > li > a.navTreeCurrentItem,
+.portletNavigationTree .portletItem .navTreeLevel0 > li > div > a.navTreeCurrentItem {
+  background-color: #eeeeee;
+  border-color: #ddd;
+  cursor: default;
+}
+.portletNavigationTree .portletItem .navTreeLevel0 > img {
+  max-width: none;
+}
+.portletNavigationTree .portletItem .navTreeLevel0 .navTree > li {
+  position: relative;
+}
+.portletNavigationTree .portletItem .navTreeLevel0 .navTree > li:before {
+  content: "-";
+  left: -10px;
+  position: absolute;
+}
+.portletNavigationTree .portletItem .navTreeLevel0 .navTree > li:last-child {
+  margin-bottom: 10px;
+}
+.portletNavigationTree .portletItem .navTreeLevel0 .navTree .navTreeCurrentItem {
+  color: #555555;
 }
 .cloud1 {
   font-size: 1em;
