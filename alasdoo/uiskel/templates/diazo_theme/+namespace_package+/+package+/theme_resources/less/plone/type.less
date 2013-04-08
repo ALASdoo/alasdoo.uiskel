@@ -19,3 +19,13 @@
     font-weight: 200;
     line-height: @baseLineHeight * 1.5;
 }
+
+#viewlet-below-content-title {
+    .transition(~"opacity .2s linear .2s");
+    opacity: 0;
+
+    &:hover {
+        .transition(~"opacity .2s linear .2s");
+        opacity: 1;
+    }
+}
