@@ -22,10 +22,7 @@
 
         a {
             display: block;
-            padding-right: 12px;
-            padding-left: 12px;
-            padding-top: 8px;
-            padding-bottom: 8px;
+            padding: 8px 12px;
             line-height: @baseLineHeight;
             border: 1px solid transparent;
             .border-radius(4px 4px 0 0);
@@ -63,6 +60,11 @@
         border-bottom-color: transparent;
         cursor: default;
         text-decoration: none;
+    }
+    a.required span:after {
+        content: "■";
+        color: @red;
+        padding-left: 10px;
     }
 }
 
@@ -102,161 +104,6 @@
         float: right;
     }
 }
-
-
-.actionMenu {
-    white-space: nowrap;
-    position: relative;
-    margin-bottom: 0;
-
-    a, div {
-        display: block !important;
-        text-decoration: none;
-        white-space: nowrap;
-    }
-    dt {
-        font-weight: normal;
-    }
-    &.deactivated dd {
-        display: none;
-    }
-    &.activated {
-        dd {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            z-index: @zindexDropdown;
-            float: left;
-            min-width: 160px;
-            padding: 5px 0;
-            margin: 0; // override default ul
-            background-color: @dropdownBackground;
-            border: 1px solid #ccc; // Fallback for IE7-8
-            border: 1px solid @dropdownBorder;
-            *border-right-width: 2px;
-            *border-bottom-width: 2px;
-            .border-radius(6px);
-            .box-shadow(0 5px 10px rgba(0,0,0,.2));
-            -webkit-background-clip: padding-box;
-               -moz-background-clip: padding;
-                    background-clip: padding-box;
-
-            ul {
-                list-style: none;
-                margin-left: 0;
-
-                a {
-                    margin-right: 0 !important;
-                }
-            }
-        }
-        &#plone-contentmenu-workflow dd {
-            right: 0;
-            left: auto;
-        }
-    }
-}
-
-.actionSeparator > div {
-    background: none repeat scroll 0 0 #F5F5F5;
-    border-bottom: 1px solid #DDDDDD;
-    padding: 5px 0;
-    text-align: center;
-}
-
-// .actionSeparator {
-//     #folderHeader,
-//     #contextHeader {
-//         .subMenuTitle{
-//             color: @EditBar-subMenuTitle-color;
-//         }
-//     }
-// }
-
-
-// #content {
-//     ul.formTabs {
-//         background-color: @FormTab-background;
-//         border: @FormTab-border;
-//         display: block;
-//         border-style: solid solid none solid;
-//         margin-left: 0;
-//         .border-top-radius(0.5em);
-//     }
-//     li.formTab {
-//         display: inline;
-//         margin-right:0.25em;
-
-//         a {
-//             /* this isn't supported by all browsers, so we keep it in a separate rule */
-//             display: inline-block;
-//             line-height: @FormTab-link-line-height;
-//             padding: @FormTab-link-padding;
-//             text-decoration: none;
-//             border: none;
-//             margin: 0 ;
-
-//             &.selected {
-//                 font-weight: @FormTab-link-selected-font-weight;
-//                 background: @FormTab-link-selected-background;
-//                 color: @FormTab-link-selected-color;
-//                 .border-top-radius(0.5em);
-//             }
-//             &:hover {
-//                 background: @FormTab-link-hover-background;
-//                 color: @FormTab-link-hover-color;
-//                 .border-top-radius(0.5em);
-//             }
-//             &.notify {
-//                 background-color: @FormTab-link-notify-background;
-//                 color: @FormTab-link-notify-color;
-//             }
-//             &.required span:after {
-//                 content: "■";
-//                 color: Red;
-//                 padding-left: 0.2em;
-//             }
-//         }
-//     }
-//     fieldset.formPanel {
-//         border: none;
-
-//         &.hidden {
-//             display: none;
-//         }
-//     }
-//     div.formControls input.hidden {
-//         display: none;
-//     }
-// }
-
-// #content-views {
-//     float: left;
-//     background-color: @EditBar-background;
-
-//     a {
-//         /* this isn't supported by all browsers, so we keep it in a separate rule */
-//         display: inline-block;
-//         color: @EditBar-color;
-//         line-height: @EditBar-line-height;
-//         padding: 0 0.75em;
-//         text-decoration: none;
-//         border: none;
-//         margin: 0 ;
-//     }
-//     li.selected a {
-//         font-weight: @EditBar-selected-font-weight;
-//         background: @EditBar-selected-background;
-//         color: @EditBar-selected-color;
-//         .border-top-radius(0.5em);
-//     }
-//     li a:hover {
-//         background: @EditBar-hover-background;
-//         color: @EditBar-hover-color;
-//         .border-top-radius(0.5em);
-//     }
-// }
-
 
 // Workflow Pull-down menu state indicators
 // -----------------------------------------------------

@@ -4,6 +4,9 @@ Changelog
 1.0rc1 (2013-04-XX)
 -------------------
 
+- Login form styling [vsomogyi]
+- Dashboard styling [vsomogyi]
+- Search page styling [vsomogyi]
 - Navigation portlet styling [vsomogyi]
 - Overlay styling [vsomogyi]
 - Form styling [vsomogyi]

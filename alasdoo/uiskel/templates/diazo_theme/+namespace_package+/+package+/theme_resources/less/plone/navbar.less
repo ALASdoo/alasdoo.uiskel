@@ -149,8 +149,69 @@
         }
     }
 
-
     // TODO: add dropdown menu
 
+}
 
+
+// Dropdown menus
+// -----------------------------
+.actionMenu {
+    white-space: nowrap;
+    position: relative;
+    margin-bottom: 0;
+
+    a, div {
+        display: block !important;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+    dt {
+        font-weight: normal;
+    }
+    &.deactivated dd {
+        display: none;
+    }
+    &.activated {
+        dd {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: @zindexDropdown;
+            float: left;
+            min-width: 160px;
+            padding: 5px 0;
+            margin: 0; // override default ul
+            background-color: @dropdownBackground;
+            border: 1px solid #ccc; // Fallback for IE7-8
+            border: 1px solid @dropdownBorder;
+            *border-right-width: 2px;
+            *border-bottom-width: 2px;
+            .border-radius(6px);
+            .box-shadow(0 5px 10px rgba(0,0,0,.2));
+            -webkit-background-clip: padding-box;
+               -moz-background-clip: padding;
+                    background-clip: padding-box;
+
+            ul {
+                list-style: none;
+                margin-left: 0;
+
+                a {
+                    margin-right: 0 !important;
+                }
+            }
+        }
+        &#plone-contentmenu-workflow dd {
+            right: 0;
+            left: auto;
+        }
+    }
+}
+
+.actionSeparator > div {
+    background: none repeat scroll 0 0 #F5F5F5;
+    border-bottom: 1px solid #DDDDDD;
+    padding: 5px 0;
+    text-align: center;
 }

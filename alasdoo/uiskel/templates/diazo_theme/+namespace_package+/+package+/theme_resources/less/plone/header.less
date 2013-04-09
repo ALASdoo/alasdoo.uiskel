@@ -15,17 +15,36 @@
 // --------------------------
 
 #portal-personaltools {
-    background: @Personaltools-background;
     position: absolute;
     z-index: 3; /* personaltools should be above #portal-header (with z-index: 2) */
     top: 0;
     right: 0;
     padding: 0.25em 0.5em;
-    margin: @Personaltools-margin;
+    margin: 0;
+    list-style: none;
+    border: 1px solid @navbarBorder;
     .border-bottom-radius(0.5em);
+    #gradient > .vertical(@navbarBackground, @navbarBackgroundHighlight);
+    .box-shadow(0 1px 4px rgba(0,0,0,.065));
 
-    a, a:link, a:hover, a:active, a:visited {
-        color: @Personaltools-link-color!important;
+    .actionMenuHeader a {
+        font-size: @fontSizeSmall;
+    }
+    .actionMenuContent a {
+        display: block;
+        padding: 8px 12px;
+        line-height: @baseLineHeight;
+        border: 1px solid transparent;
+        .border-radius(4px 4px 0 0);
+
+        &:hover {
+            text-decoration: none;
+            background-color: @grayLighter;
+            border-color: @grayLighter @grayLighter #ddd;
+        }
+    }
+    a {
+        color: @gray;
     }
     dt {
         font-weight: normal;
@@ -37,24 +56,6 @@
     dd {
         right: 0;
         left: auto;
-        padding-top: 0.5em;
-        background: @Personaltools-background;
-        padding-bottom: 0.5em;
-
-        a {
-            line-height: @Personaltools-line-height;
-            padding: 0 0.75em;
-
-            &:hover {
-                background: @Personaltools-hover-background;
-                color: @Personaltools-hover-color;
-            }
-        }
-    }
-
-    #anon-personalbar a {
-        float: left;
-        margin-right: 0.5em;
     }
 }
 
