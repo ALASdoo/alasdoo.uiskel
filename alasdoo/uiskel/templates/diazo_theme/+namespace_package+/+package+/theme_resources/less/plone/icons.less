@@ -1,0 +1,49 @@
+//
+// Icons
+// --------------------------
+
+.icons-on {
+    [class^="contenttype-"] {
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 14px;
+            .ie7-restore-right-whitespace();
+            line-height: 14px;
+            background-image: url("@{iconSpritePath}");
+            background-position: 14px 14px;
+            background-repeat: no-repeat;
+            margin-top: 1px;
+        }
+    }
+
+    .contenttype-document:before {
+        background-position: -96px  -72px;
+    }
+    .contenttype-event:before {
+        background-position: -48px  -24px;
+    }
+    .contenttype-folder:before {
+        background-position: -408px -120px; width: 16px;
+    }
+    .contenttype-link:before {
+        background-position: -336px -144px;
+    }
+    .contenttype-news-item:before {
+        background-position: -264px -24px;
+    }
+    .contenttype-collection:before {
+        background-position: -25px  -48px;
+    }
+    .contenttype-file:before {
+        background-position: -24px  -24px;
+    }
+    .contenttype-image:before {
+        background-position: -456px -48px;
+    }
+
+    .contenttype-plone-site:before {
+        display: none;
+    }
+}
