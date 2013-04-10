@@ -4,6 +4,7 @@ Changelog
 1.0rc1 (2013-04-XX)
 -------------------
 
+- Bootstrap JS added [vsomogyi]
 - Control Panel styling [vsomogyi]
 - Content type icons [vsomogyi]
 - Login form styling [vsomogyi]

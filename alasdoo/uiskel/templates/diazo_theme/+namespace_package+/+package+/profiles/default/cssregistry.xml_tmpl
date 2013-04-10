@@ -5,6 +5,12 @@
   <stylesheet
       enabled="False"
       expression="not:request/HTTP_X_THEME_ENABLED | nothing"
+      id="reset.css"
+      />
+
+  <stylesheet
+      enabled="False"
+      expression="not:request/HTTP_X_THEME_ENABLED | nothing"
       id="public.css"
       />
 
