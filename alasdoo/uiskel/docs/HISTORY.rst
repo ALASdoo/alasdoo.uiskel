@@ -4,6 +4,7 @@ Changelog
 1.0rc1 (2013-04-XX)
 -------------------
 
+- Print styling [vsomogyi]
 - Responsive CSS added [vsomogyi]
 - Bootstrap JS added [vsomogyi]
 - Control Panel styling [vsomogyi]
