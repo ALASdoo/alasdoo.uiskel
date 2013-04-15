@@ -1,0 +1,289 @@
+//
+// Mobile only styles
+// --------------------------------------------------
+
+// CSS that is applied only for sceen that is less then 480px wide.
+
+@media only screen and (max-width: 480px) {
+
+    //
+    // Custom styling for tablet
+    // ----------------------------------------------
+
+
+    //
+    // Layout
+    // ----------------------------------------------
+
+    body, #container {
+        width:100%;
+    }
+
+    #portal-column-main,
+    #portal-column-one,
+    #portal-column-two {
+        display: block;
+        float: none!important;
+        position: relative;
+        width: 100%;
+    }
+    #portal-column-main {
+        margin-right: 0!important;
+    }
+    #portal-column-wrapper {
+        margin-right: 0!important;
+        margin-left: 0!important;
+    }
+    #portal-column-one {
+        margin-left: 0!important;
+        padding-left: 0!important;
+    }
+    #portal-column-two {
+        margin-left: 0!important;
+    }
+
+
+    //
+    // Element styling
+    // ----------------------------------------------
+
+    // MENU
+
+    #mobile-menu {
+        display: block!important;
+        visibility: visible!important;
+    }
+
+    #mobile-globalnav {
+        outline: none;
+    }
+
+    .navbar {
+        display: none;
+        visibility: hidden;
+
+        position: absolute;
+        right: 0;
+        top: 94px;
+
+        .navbar-inner {
+            padding: 0;
+        }
+    }
+
+    #portal-globalnav {
+        min-width: 224px;
+        width: 100%;
+        .box-shadow(0 5px 10px rgba(0,0,0,.2));
+
+        &:before {
+            content: "";
+            position: absolute;
+            right: 50px;
+            top: -13px;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 12px solid #FFF;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            right: 54px;
+            top: -9px;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 8px solid #ccc;
+            border-bottom: 8px solid rgba(0,0,0,.2);
+        }
+
+        > li {
+            display:block;
+            float: none;
+            width: 100%;
+        }
+    }
+
+
+    // SEARCH
+
+    #mobile-search {
+        outline: none;
+    }
+
+    #search-and-links {
+        right: 0;
+    }
+
+    #portal-searchbox {
+        display: none;
+        visibility: hidden;
+
+        position: absolute;
+        right: 0;
+
+        background: #FFF;
+        margin-top: 7px;
+        padding: 20px 10px 0px;
+        border: 1px solid rgba(0,0,0,.2);
+        .border-radius(6px);
+        .box-shadow(0 5px 10px rgba(0,0,0,.2));
+
+        &:before {
+            content: "";
+            position: absolute;
+            right: 7px;
+            top: -13px;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 12px solid #FFF;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            right: 11px;
+            top: -9px;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 8px solid #ccc;
+            border-bottom: 8px solid rgba(0,0,0,.2);
+        }
+    }
+
+    #LSResult, .LSResult {
+        margin-top: 15px;
+    }
+    .LSRow, #LSNothingFound {
+        width: auto;
+    }
+
+    // #searchGadget {
+    //     width: @mobile-SearchGadget-width;
+    // }
+
+    // #LSResult {
+    //     margin: 0;
+    //     position: relative;
+
+    //     fieldset {
+    //         overflow:hidden;
+    //         width: 100%;
+    //     }
+    // }
+
+    // .LSRow, #LSNothingFound {
+    //     width: 100%;
+    // }
+
+    // input.searchPage {
+    //     font-size: @mobile-Input-SearchPage-font-size !important;
+    // }
+
+
+    // EDIT BAR
+    // #mobile-page-settings {
+    //     display: block!important;
+    //     visibility: visible;
+
+    //     cursor: pointer;
+    //     color: @mobile-EditBar-Mobile-page-settings-color;
+    //     font-size: @mobile-EditBar-Mobile-page-settings-font-size;
+    //     text-align: center;
+    //     padding: @mobile-EditBar-Mobile-page-settings-padding;
+    //     margin: @mobile-EditBar-Mobile-page-settings-margin;
+    //     border: @mobile-EditBar-Mobile-page-settings-border;
+    //     .rounded-corners(5px);
+
+    //     &.selected {
+    //         background: @mobile-EditBar-Mobile-page-settings-selected-background;
+    //     }
+    // }
+
+    // #edit-bar {
+    //     display: none;
+    //     visibility: hidden;
+
+    //     background-color:@mobile-EditBar-background;
+    //     border:@mobile-EditBar-border;
+    //     padding-bottom: @mobile-EditBar-padding-bottom;
+    // }
+
+    // #content-views {
+    //     float:none;
+
+    //     a {
+    //         font-size: @mobile-EditBar-content-views-a-font-size;
+    //         line-height: @mobile-EditBar-content-views-a-line-height !important;
+    //         margin: @mobile-EditBar-content-views-a-margin;
+    //         padding: @mobile-EditBar-content-views-a-padding;
+    //     }
+
+    //     li.selected a, li a:hover {
+    //         .rounded-corners(5px);
+    //     }
+    // }
+
+    // #content li.formTab a {
+    //     font-size: @mobile-EditBar-FormTab-font-size;
+    //     line-height: @mobile-EditBar-FormTab-line-height !important;
+    //     padding: @mobile-EditBar-FormTab-padding;
+    // }
+
+    // #contentActionMenus {
+    //     float: none;
+    //     top: auto;
+    //     right: auto;
+    //     margin: @mobile-EditBar-ContentActionMenus-margin;
+    //     .rounded-corners(0.5em);
+
+    //     a {
+    //         width: @mobile-EditBar-ContentActionMenus-a-width;
+    //         line-height: @mobile-EditBar-ContentActionMenus-a-line-height !important;
+    //         font-size: @mobile-EditBar-ContentActionMenus-a-font-size;
+    //         padding-top: @mobile-EditBar-ContentActionMenus-a-padding-top;
+    //     }
+    //     dl.actionMenu {
+    //         float:none;
+
+    //         a,
+    //         &.activated dd {
+    //             background-color: @mobile-EditBar-ContentActionMenus-actionMenu-a-background;
+    //             min-width: @mobile-EditBar-ContentActionMenus-actionMenu-a-min-width !important;
+    //             right: auto;
+    //             position: relative;
+    //             border: @mobile-EditBar-ContentActionMenus-actionMenu-a-min-width;
+    //         }
+    //     }
+    //     .actionMenuContent {
+    //         background-color: @mobile-EditBar-ContentActionMenus-actionMenuContent-background !important;
+    //     }
+    // } // edit bar end
+
+
+    // input, textarea {
+    //     font-size: @mobile-Input-font-size !important;
+    // }
+
+    // div.managePortletsLink,
+    // a.managePortletsFallback {
+    //     font-size: @mobile-managePortlets-font-size;
+    // }
+
+    // div.overlay {
+    //     font-size: @mobile-overlay-font-size;
+    // }
+
+    // .pb-ajax > div {
+    //     width: @mobile-pb-ajax-width;
+    // }
+
+    // div.overlay-iframe,
+    // div.overlay-ajax {
+    //     width: @mobile-Overlay-width;
+    // }
+
+    // #fieldset-openid-login label, #login-form label {
+    //     text-align: @mobile-Login-form-label-text-align;
+    // }
+
+
+}

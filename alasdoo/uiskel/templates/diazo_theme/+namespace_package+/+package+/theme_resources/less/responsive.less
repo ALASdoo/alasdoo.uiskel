@@ -1,15 +1,19 @@
-// Base variables and mixins
+//   _     _  _
+//  /_//  /_//_`   _/ _   _
+// / //_,/ /._/  /_/./_/./_/.                          ALASdoo.UISkel
+// ------------------------------------------------------------------
 
-@import "theme/base.less";
-@import "theme/mixins.less";
+//
+// Responsive
+// ---------------------------------------
+
+// Core variables and mixins
+@import "variables.less";
+@import "mixins.less";
 
 
-// ==|== media queries ======================================================
-// PLACEHOLDER Media Queries for Responsive Design.
-// These override the primary ('mobile first') styles
-// Modify as content requires.
-// ==========================================================================
-
-@import "desktop/init.less";
-@import "tablet/init.less";
-@import "mobile/init.less";
+// Media queries
+// ----------------------------------------
+@import "plone/desktop.less";
+@import "plone/tablet.less";
+@import "plone/mobile.less";

@@ -180,8 +180,8 @@
     <!-- Copy mobile elements -->
     <drop css:theme="#mobile-page-settings"
           if-content="not(//*[@id='edit-bar'])" />
-    <replace css:content="#mobile-menu" css:theme="#mobile-menu" />
-    <replace css:content="#mobile-page-settings" css:theme="#mobile-page-settings" />
+    <!-- <replace css:content="#mobile-menu" css:theme="#mobile-menu" /> -->
+    <!-- <replace css:content="#mobile-page-settings" css:theme="#mobile-page-settings" /> -->
 
 
 

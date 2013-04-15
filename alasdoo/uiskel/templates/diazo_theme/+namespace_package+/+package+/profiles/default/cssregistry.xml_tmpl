@@ -105,6 +105,12 @@
       />
 
   <stylesheet
+      enabled="False"
+      expression="not:request/HTTP_X_THEME_ENABLED | nothing"
+      id="++resource++plone.app.jquerytools.overlays.css"
+      />
+
+  <stylesheet
       title=""
       authenticated="False"
       cacheable="True"

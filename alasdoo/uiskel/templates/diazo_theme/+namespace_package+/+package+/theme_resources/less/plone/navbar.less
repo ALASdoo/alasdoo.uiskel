@@ -57,8 +57,11 @@
 
 // Fixed navbar
 // -------------------------
+// If using this, don't forget to add top padding to the body
+// body { padding-top: 40px; }
 
 // Shared (top/bottom) styles
+.navbar.affix,
 .navbar-fixed-top,
 .navbar-fixed-bottom {
     position: fixed;
@@ -67,24 +70,32 @@
     z-index: @zindexFixedNavbar;
     margin-bottom: 0; // remove 18px margin for default navbar
 }
-.navbar-fixed-top .navbar-inner,
-.navbar-static-top .navbar-inner {
-    border-width: 0 0 1px;
+.navbar.affix,
+.navbar-fixed-top,
+.navbar-static-top {
+    .navbar-inner {
+        border-width: 0 0 1px;
+    }
 }
 .navbar-fixed-bottom .navbar-inner {
     border-width: 1px 0 0;
 }
-.navbar-fixed-top .navbar-inner,
-.navbar-fixed-bottom .navbar-inner {
-    padding-left:  0;
-    padding-right: 0;
-    .border-radius(0);
+.navbar.affix,
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+    .navbar-inner {
+        padding-left:  0;
+        padding-right: 0;
+        .border-radius(0);
+    }
 }
 
 // Fixed to top
+.navbar.affix,
 .navbar-fixed-top {
     top: 0;
 }
+.navbar.affix,
 .navbar-fixed-top,
 .navbar-static-top {
     .navbar-inner {
@@ -149,8 +160,15 @@
         }
     }
 
-    // TODO: add dropdown menu
+}
 
+.navbar.affix {
+    #portal-globalnav {
+        width: 100%;
+        max-width: 1060px;
+        margin: 0 auto;
+        float: none;
+    }
 }
 
 
@@ -160,6 +178,7 @@
     white-space: nowrap;
     position: relative;
     margin-bottom: 0;
+    margin-top: 0;
 
     a, div {
         display: block !important;
