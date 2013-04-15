@@ -18,9 +18,13 @@
             $menuBtn = $('#mobile-globalnav'),
             $search = $('#portal-searchbox'),
             $searchBtn = $('#mobile-search'),
-            $quicklinks = $('#quicklinks');
+            $quicklinks = $('#quicklinks'),
+            $pageSettingsBtn = $('#mobile-page-settings');
 
-        $menuBtn.bind('click', function() {
+        // menu button click event
+        $menuBtn.bind('click', function(e) {
+            e.preventDefault();
+
             // mark the button as active
             $menuBtn.toggleClass('active');
             $searchBtn.removeClass('active');
@@ -33,7 +37,10 @@
             $quicklinks.toggle(!$menu.hasClass('visible'));
         });
 
-        $searchBtn.bind('click', function() {
+        // search button click event
+        $searchBtn.bind('click', function(e) {
+            e.preventDefault();
+
             // mark the button as active
             $menuBtn.removeClass('active');
             $searchBtn.toggleClass('active');
@@ -46,7 +53,10 @@
             $quicklinks.toggle(!$search.hasClass('visible'));
         });
 
-        $('#mobile-page-settings').bind('click', function() {
+        // page settings button click event
+        $pageSettingsBtn.bind('click', function(e) {
+            e.preventDefault();
+
             $('#edit-bar').toggleClass('visible');
             $(this).toggleClass('selected');
         });

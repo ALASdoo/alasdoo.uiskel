@@ -156,134 +156,96 @@
         width: auto;
     }
 
-    // #searchGadget {
-    //     width: @mobile-SearchGadget-width;
-    // }
-
-    // #LSResult {
-    //     margin: 0;
-    //     position: relative;
-
-    //     fieldset {
-    //         overflow:hidden;
-    //         width: 100%;
-    //     }
-    // }
-
-    // .LSRow, #LSNothingFound {
-    //     width: 100%;
-    // }
-
-    // input.searchPage {
-    //     font-size: @mobile-Input-SearchPage-font-size !important;
-    // }
 
 
     // EDIT BAR
-    // #mobile-page-settings {
-    //     display: block!important;
-    //     visibility: visible;
 
-    //     cursor: pointer;
-    //     color: @mobile-EditBar-Mobile-page-settings-color;
-    //     font-size: @mobile-EditBar-Mobile-page-settings-font-size;
-    //     text-align: center;
-    //     padding: @mobile-EditBar-Mobile-page-settings-padding;
-    //     margin: @mobile-EditBar-Mobile-page-settings-margin;
-    //     border: @mobile-EditBar-Mobile-page-settings-border;
-    //     .rounded-corners(5px);
+    #mobile-page-settings {
+        display: block!important;
+        visibility: visible;
 
-    //     &.selected {
-    //         background: @mobile-EditBar-Mobile-page-settings-selected-background;
-    //     }
-    // }
+        cursor: pointer;
+        color: @grayLight;
+        text-align: center;
+        padding: 5px;
+        margin: 10px 0;
+        border: 1px dashed @grayLighter;
+        .border-radius(6px);
 
-    // #edit-bar {
-    //     display: none;
-    //     visibility: hidden;
+        &.selected {
+            background: @grayLighter;
+        }
+    }
 
-    //     background-color:@mobile-EditBar-background;
-    //     border:@mobile-EditBar-border;
-    //     padding-bottom: @mobile-EditBar-padding-bottom;
-    // }
+    #edit-bar {
+        display: none;
+        visibility: hidden;
 
-    // #content-views {
-    //     float:none;
+        border: 1px dashed @grayLighter;
+        .clearfix();
+    }
 
-    //     a {
-    //         font-size: @mobile-EditBar-content-views-a-font-size;
-    //         line-height: @mobile-EditBar-content-views-a-line-height !important;
-    //         margin: @mobile-EditBar-content-views-a-margin;
-    //         padding: @mobile-EditBar-content-views-a-padding;
-    //     }
+    .contentViews,
+    #contentActionMenus {
+        margin-left: 0;
 
-    //     li.selected a, li a:hover {
-    //         .rounded-corners(5px);
-    //     }
-    // }
+        > li {
+            margin-bottom: 0;
 
-    // #content li.formTab a {
-    //     font-size: @mobile-EditBar-FormTab-font-size;
-    //     line-height: @mobile-EditBar-FormTab-line-height !important;
-    //     padding: @mobile-EditBar-FormTab-padding;
-    // }
+            a {
+                padding-top: 8px;
+                padding-bottom: 8px;
+                margin-top: 2px;
+                margin-bottom: 2px;
+                .border-radius(5px);
+            }
+        }
+        .selected {
+            a, a:hover {
+                border: 1px solid #ddd;
+            }
+        }
+    }
 
-    // #contentActionMenus {
-    //     float: none;
-    //     top: auto;
-    //     right: auto;
-    //     margin: @mobile-EditBar-ContentActionMenus-margin;
-    //     .rounded-corners(0.5em);
+    .contentActions {
+        background: none;
+        position: relative;
+        height: auto;
+        width: auto;
+        visibility: visible;
+        clear: both;
 
-    //     a {
-    //         width: @mobile-EditBar-ContentActionMenus-a-width;
-    //         line-height: @mobile-EditBar-ContentActionMenus-a-line-height !important;
-    //         font-size: @mobile-EditBar-ContentActionMenus-a-font-size;
-    //         padding-top: @mobile-EditBar-ContentActionMenus-a-padding-top;
-    //     }
-    //     dl.actionMenu {
-    //         float:none;
+        &:hover #contentActionMenus {
+            border: 0;
+            .box-shadow(none);
+        }
+    }
 
-    //         a,
-    //         &.activated dd {
-    //             background-color: @mobile-EditBar-ContentActionMenus-actionMenu-a-background;
-    //             min-width: @mobile-EditBar-ContentActionMenus-actionMenu-a-min-width !important;
-    //             right: auto;
-    //             position: relative;
-    //             border: @mobile-EditBar-ContentActionMenus-actionMenu-a-min-width;
-    //         }
-    //     }
-    //     .actionMenuContent {
-    //         background-color: @mobile-EditBar-ContentActionMenus-actionMenuContent-background !important;
-    //     }
-    // } // edit bar end
+    #contentActionMenus {
+        border: 0;
+        opacity: 1;
+        position: relative;
+        visibility: visible;
+        width: auto;
+
+        > li {
+            float: none;
+
+            a {
+                clear: both;
+            }
+        }
+    }
+
+    #plone-contentmenu-workflow.actionMenu.activated dd {
+        right: auto;
+    }
 
 
-    // input, textarea {
-    //     font-size: @mobile-Input-font-size !important;
-    // }
+    // BELOW CONTENT TITLE VIEWLET
 
-    // div.managePortletsLink,
-    // a.managePortletsFallback {
-    //     font-size: @mobile-managePortlets-font-size;
-    // }
-
-    // div.overlay {
-    //     font-size: @mobile-overlay-font-size;
-    // }
-
-    // .pb-ajax > div {
-    //     width: @mobile-pb-ajax-width;
-    // }
-
-    // div.overlay-iframe,
-    // div.overlay-ajax {
-    //     width: @mobile-Overlay-width;
-    // }
-
-    // #fieldset-openid-login label, #login-form label {
-    //     text-align: @mobile-Login-form-label-text-align;
-    // }
-
+    #viewlet-below-content-title {
+        opacity: 1;
+    }
 
 }
