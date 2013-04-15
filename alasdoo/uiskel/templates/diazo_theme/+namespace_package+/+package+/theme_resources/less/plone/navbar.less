@@ -206,7 +206,7 @@
             border: 1px solid @dropdownBorder;
             *border-right-width: 2px;
             *border-bottom-width: 2px;
-            .border-radius(6px);
+            .border-radius(@borderRadiusLarge);
             .box-shadow(0 5px 10px rgba(0,0,0,.2));
             -webkit-background-clip: padding-box;
                -moz-background-clip: padding;
@@ -229,7 +229,7 @@
 }
 
 .actionSeparator > div {
-    background: none repeat scroll 0 0 #F5F5F5;
+    background: @dropdownDivider;
     border-bottom: 1px solid #DDDDDD;
     padding: 5px 0;
     text-align: center;

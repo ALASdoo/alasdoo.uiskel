@@ -4,7 +4,8 @@
 // ------------------------------------------------------------------
 
 // Core variables and mixins
-@import "variables.less";
+// @import "bootstrap/variables.less"; // variables for bootstrap less
+@import "variables.less";           // Plone specific variables
 @import "mixins.less";
 @import "plone/reset.less";
 
@@ -12,46 +13,46 @@
 // BOOTSTRAP styles
 
 // CSS Reset
-// @import "bootstrap/reset.less";
+// @import "bootstrap/reset.less"; <- remove, we are using the one from plone
 
 
-// Base CSS
-@import "bootstrap/type.less";
-@import "bootstrap/code.less";
-@import "bootstrap/forms.less";
-// @import "bootstrap/tables.less";
+// // Base CSS
+// // @import "bootstrap/type.less";
+// // @import "bootstrap/code.less";
+// @import "bootstrap/forms.less";
+// // @import "bootstrap/tables.less";
 
-// Components: common
-@import "bootstrap/sprites.less";
-@import "bootstrap/dropdowns.less";
-@import "bootstrap/wells.less";
-@import "bootstrap/component-animations.less";
-@import "bootstrap/close.less";
+// // Components: common
+// @import "bootstrap/sprites.less";
+// // @import "bootstrap/dropdowns.less";
+// // @import "bootstrap/wells.less";
+// // @import "bootstrap/component-animations.less";
+// // @import "bootstrap/close.less";
 
-// Components: Buttons & Alerts
-@import "bootstrap/buttons.less";
-@import "bootstrap/button-groups.less";
-// @import "bootstrap/alerts.less";
+// // Components: Buttons & Alerts
+// // @import "bootstrap/buttons.less";
+// // @import "bootstrap/button-groups.less";
+// // // @import "bootstrap/alerts.less";
 
-// Components: Nav
-// @import "bootstrap/navs.less";
-// @import "bootstrap/navbar.less"; <- remove, we are using the one from plone
-@import "bootstrap/pagination.less";
-@import "bootstrap/pager.less";
+// // Components: Nav
+// // // @import "bootstrap/navs.less"; <- remove, we are using the one from plone
+// // // @import "bootstrap/navbar.less"; <- remove, we are using the one from plone
+// @import "bootstrap/pagination.less";
+// @import "bootstrap/pager.less";
 
-// Components: Popovers
-@import "bootstrap/modals.less";
-@import "bootstrap/tooltip.less";
-@import "bootstrap/popovers.less";
+// // Components: Popovers
+// // @import "bootstrap/modals.less";
+// // @import "bootstrap/tooltip.less";
+// // @import "bootstrap/popovers.less";
 
-// Components: Misc
-@import "bootstrap/thumbnails.less";
-@import "bootstrap/media.less";
-@import "bootstrap/labels-badges.less"; // <- label renamed to lbl (Plone uses label class)
-@import "bootstrap/progress-bars.less";
-@import "bootstrap/accordion.less";
-@import "bootstrap/carousel.less";
-@import "bootstrap/hero-unit.less";
+// // Components: Misc
+// // @import "bootstrap/thumbnails.less";
+// // @import "bootstrap/media.less";
+// // @import "bootstrap/labels-badges.less"; // <- label renamed to lbl (Plone uses label class)
+// // @import "bootstrap/progress-bars.less";
+// // @import "bootstrap/accordion.less";
+// // @import "bootstrap/carousel.less";
+// // @import "bootstrap/hero-unit.less";
 
 
 
@@ -59,6 +60,7 @@
 
 // Base CSS
 @import "plone/type.less";
+@import "plone/code.less";
 @import "plone/tables.less";
 @import "plone/forms.less";
 @import "plone/icons.less";

@@ -25,7 +25,7 @@
             padding: 8px 12px;
             line-height: @baseLineHeight;
             border: 1px solid transparent;
-            .border-radius(4px 4px 0 0);
+            .border-radius(@baseBorderRadius @baseBorderRadius 0 0);
 
             margin-right: 2px;
 
@@ -42,7 +42,7 @@
     .selected {
         a, a:hover {
             color: @gray;
-            background-color: @bodyBackground;
+            background-color: @containerBackground;
             border: 1px solid #ddd;
             border-bottom-color: transparent;
             cursor: default;
@@ -55,7 +55,7 @@
 
     .selected, .selected:hover {
         color: @gray;
-        background-color: @bodyBackground;
+        background-color: @containerBackground;
         border: 1px solid #ddd;
         border-bottom-color: transparent;
         cursor: default;
@@ -93,7 +93,7 @@
     visibility: hidden;
     z-index: @zindexPopover;
 
-    .border-radius(4px);
+    .border-radius(@baseBorderRadius);
     .transition(~"opacity .2s linear .3s, border .2s linear .7s, box-shadow .2s linear .7s");
     .box-shadow(~"inset 0 0 0 #FFF, 0 0 0 #FFF");
 
@@ -114,27 +114,27 @@
         background-color: @workflow-state-private;
         border: 0.1em solid @workflow-state-private;
         color: @workflow-state-private-color !important;
-        .border-radius(0.5em);
+        .border-radius(@baseBorderRadius);
     }
     .state-visible {
         padding: 0 0.5em;
         background-color: @workflow-state-visible;
         border: 0.1em solid @workflow-state-visible;
         color: @workflow-state-visible-color !important;
-        .border-radius(0.5em);
+        .border-radius(@baseBorderRadius);
     }
     .state-published {
         padding: 0 0.5em;
         background-color: @workflow-state-published;
         border: 0.1em solid @workflow-state-published;
         color: @workflow-state-published-color !important;
-        .border-radius(0.5em);
+        .border-radius(@baseBorderRadius);
     }
     .state-pending {
         padding: 0 0.5em;
         background-color: @workflow-state-pending;
         border: 0.1em solid @workflow-state-pending;
         color: @workflow-state-pending-color !important;
-        .border-radius(0.5em);
+        .border-radius(@baseBorderRadius);
     }
 }
