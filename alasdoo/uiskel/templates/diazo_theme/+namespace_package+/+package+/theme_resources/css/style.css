@@ -2650,6 +2650,9 @@ input.context.active {
 .portletNavigationTree .portletItem .navTreeLevel0 .navTree .navTreeCurrentItem {
   color: #555555;
 }
+.portletNavigationTree .portletItem .navTreeItem > a > img {
+  display: none;
+}
 .portletCalendar {
   padding: 10px 15px;
   border: 1px solid #ddd;
