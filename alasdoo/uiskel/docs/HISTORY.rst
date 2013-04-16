@@ -4,6 +4,7 @@ Changelog
 1.0rc1 (2013-04-XX)
 -------------------
 
+- Bootstrap independence [vsomogyi]
 - Print styling [vsomogyi]
 - Responsive CSS added [vsomogyi]
 - Bootstrap JS added [vsomogyi]
