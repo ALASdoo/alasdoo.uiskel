@@ -176,6 +176,8 @@
     <drop attributes="style" css:content=".template-prefs_install_products_form fieldset" />
 
 
+    <!-- Remove content actions wrapper if no elements inside -->
+    <drop css:content=".contentActions" css:if-not-content="#contentActionMenus" />
 
     <!-- Copy mobile elements -->
     <drop css:theme="#mobile-page-settings"
