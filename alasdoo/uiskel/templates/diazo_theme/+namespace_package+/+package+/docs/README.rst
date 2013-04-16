@@ -1,6 +1,6 @@
 - Not using html5boilerplate's css, we are rolling out our own based on twitter
-bootstrap and Plone's default css.
-- Sticking with Plone's grid system, for main template modified grid.
+bootstrap specially modified for Plone.
+- Sticking with Plone's grid system; for main template modified grid.
 -
 
 
