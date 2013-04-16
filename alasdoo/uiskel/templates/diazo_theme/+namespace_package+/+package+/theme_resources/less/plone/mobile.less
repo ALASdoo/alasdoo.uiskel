@@ -58,22 +58,28 @@
         outline: none;
     }
 
-    .navbar {
+    .navbar,
+    .navbar.affix {
         display: none;
         visibility: hidden;
 
         position: absolute;
+        left: auto;
         right: 0;
         top: 94px;
 
         .navbar-inner {
             padding: 0;
+            border: 1px solid @navbarBorder;
+            .border-radius(@borderRadiusLarge);
+            .box-shadow(0 1px 4px rgba(0,0,0,.065));
         }
     }
 
     #portal-globalnav {
         min-width: 224px;
         width: 100%;
+        margin: 0 auto;
         .box-shadow(0 5px 10px rgba(0,0,0,.2));
 
         &:before {
