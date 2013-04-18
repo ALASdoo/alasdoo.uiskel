@@ -60,3 +60,47 @@
 .visualClear {
     clear: both;
 }
+
+// Plone's Collapsible elements
+dl.collapsible {
+    border: 1px solid @grayLighter;
+    margin: 0;
+    padding: 0;
+
+    .collapsibleHeader {
+        float: left;
+        margin: -11px 0 0 20px;
+        padding-left: 23px;
+        cursor: pointer;
+    }
+    .collapsibleContent {
+        margin: 0;
+        padding: 0 10px;
+        clear: both;
+    }
+}
+
+dl.collapsedBlockCollapsible,
+dl.collapsedInlineCollapsible {
+    border: 1px solid transparent;
+
+    .collapsibleHeader {
+        background: @white url('../images/treeCollapsed.png') no-repeat 0.5em 50%;
+    }
+    .collapsibleContent {
+        display: none;
+    }
+}
+
+dl.collapsedInlineCollapsible {
+    display: inline;
+
+    .collapsibleHeader {
+        display: inline;
+    }
+}
+
+dl.expandedBlockCollapsible .collapsibleHeader,
+dl.expandedInlineCollapsible .collapsibleHeader {
+    background: @white url('../images/treeExpanded.png') no-repeat 0.5em 50%;
+}
