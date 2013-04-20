@@ -66,7 +66,7 @@
         position: absolute;
         left: auto;
         right: 0;
-        top: 94px;
+        top: @mobile-navbar-top;
 
         .navbar-inner {
             padding: 0;
@@ -245,6 +245,17 @@
 
     #plone-contentmenu-workflow.actionMenu.activated dd {
         right: auto;
+    }
+
+
+    // DASHBOARD
+
+    #dashboard-portlets1,
+    #dashboard-portlets2,
+    #dashboard-portlets3,
+    #dashboard-portlets4 {
+        float: none;
+        .grid-column-width(16);
     }
 
 

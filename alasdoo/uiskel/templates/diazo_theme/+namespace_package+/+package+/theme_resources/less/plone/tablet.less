@@ -105,4 +105,32 @@
             }
         }
     }
+
+    // Dashboard
+    // -------------------------------------
+    #dashboard {
+        float: left;
+        width: 100%;
+        display: block;
+        position: relative;
+    }
+    #dashboard-portlets1,
+    #dashboard-portlets2,
+    #dashboard-portlets3,
+    #dashboard-portlets4 {
+        position: relative;
+        float: left;
+        left: 100%;
+
+        .grid-column-width(8);
+    }
+    #dashboard-portlets1,
+    #dashboard-portlets3 {
+        clear: both;
+        .grid-position(0);
+    }
+    #dashboard-portlets2,
+    #dashboard-portlets4 {
+        .grid-position(8);
+    }
 }

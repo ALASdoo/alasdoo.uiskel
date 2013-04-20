@@ -116,6 +116,30 @@
   .sidebars-right .no-left-column .tablet-right-down #portal-column-main {
     margin-right: 0;
   }
+  #dashboard {
+    float: left;
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+  #dashboard-portlets1,
+  #dashboard-portlets2,
+  #dashboard-portlets3,
+  #dashboard-portlets4 {
+    position: relative;
+    float: left;
+    left: 100%;
+    width: 47.75%;
+  }
+  #dashboard-portlets1,
+  #dashboard-portlets3 {
+    clear: both;
+    margin-left: -98.875%;
+  }
+  #dashboard-portlets2,
+  #dashboard-portlets4 {
+    margin-left: -48.875%;
+  }
 }
 @media only screen and (max-width: 480px) {
   body,
@@ -336,6 +360,13 @@
   }
   #plone-contentmenu-workflow.actionMenu.activated dd {
     right: auto;
+  }
+  #dashboard-portlets1,
+  #dashboard-portlets2,
+  #dashboard-portlets3,
+  #dashboard-portlets4 {
+    float: none;
+    width: 97.75%;
   }
   #viewlet-below-content-title {
     opacity: 1;
