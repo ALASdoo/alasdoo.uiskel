@@ -143,6 +143,7 @@
         expression=""
         inline="False"
         id="++theme++${namespace_package}.${package}/javascript/libs/bootstrap/bootstrap-tooltip.js"
+        insert-before="++theme++aw.theme/javascript/libs/bootstrap/bootstrap-popover.js"
     />
 
     <!-- BOOTSTRAP - Transition -->
