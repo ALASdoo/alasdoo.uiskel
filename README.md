@@ -1,58 +1,9 @@
 Introduction
 ============
 
-A plone.app.theming theme, based on HTML5 Boilerplate, Twitter Bootstrap and
-Less Css, designed to be the starting point for rapid theme development.
-
-
-TODO: retina.js, modernizr.js
-
-
-
-Create a new theme with ZopeSkel
-================================
-To create a new theme with this ZopeSkel template, run:
-
-    ./bin/zopeskel diazo_theme my.theme
-
-Where my.theme is the name of your package. Answer a few questions, or just hit
-enter to get the default values. Move the new package to the src folder and edit
-your buildout to include the newly created package. In the buildout section add:
-
-    develop =
-        src/my.theme
-
-And in the instance section add:
-
-    eggs =
-        my.theme
-
-Don't forget to run the buildout after these changes.
-
-
-Package content
-================
-
-  * browser
-  * docs
-  * locales
-  * profiles
-  * theme_resources
-    * css - holds the generated css that is actually used by plone
-    * images - holds all the images used by the theme
-    * javascript - holds all the javascripts used by the theme
-    * less - holds all the less files that will produce the css
-        * bootstrap - Twitter Bootstrap less files
-        * plone - Plone theme specific less files
-        * style.less - main less file that includes all the other files in the
-        appropriate places.
-        * responsive.less - styles that are for responsive design
-        * mixins.less - commonly used less mixins
-        * variables.less - less variables for quick styling
-    * index.html - main template used by plone.app.theming
-    * rules.xml - rules file used by plone.app.theming
-    * rules_base.xml - Diazo rules that are shared among themes
-    * manifest.cfg - settings page for plone.app.theming
+A plone.app.theming theme skeleton, based on HTML5 Boilerplate, Twitter
+Bootstrap, Modernizr, Retina.JS and Less Css, designed to be the starting point
+for rapid theme development.
 
 
 HTML 5 Boilerplate
@@ -60,6 +11,35 @@ HTML 5 Boilerplate
 
 The main template that we are using is based on the index.html file from
 HTML 5 Boilerplate, modified to meet our responsive and layout needs.
+
+
+Twitter Bootstrap
+=================
+
+Twitter Boostrap was used as a starting point for styling and we ended up with
+a fully customized version of it by stripping out parts that we don't use and
+putting in extra styles that are needed by Plone. We packaged in the basic
+bootstrap's styles, so they just need to be enabled in order to use the stripped
+out parts.
+The javascript plugins are also included.
+
+
+Modernizr
+=========
+
+A customized version of Modernizr can be found in this package, and we strongly
+advise to build you own custom version to include only the checks that are
+really needed, as it slows down the page's load time.
+
+
+Retina.JS
+=========
+
+Support for high resolution graphics is provided by Retina.JS. As the default
+version of it checks all the images on the page if there are high resolution
+versions of them available, this results in plenty of ajax requests. To keep the
+request count low, we have modified this library to check only for images that
+have the "retina" class attribute.
 
 
 Less Css
@@ -83,9 +63,54 @@ After each update to the files, CodeKit will recompile style.less and
 responsive.less automatically, so just reload your page (if zope is in debug
 mode).
 
-Important: If less files are changed in the UISkel package itself, compile them
-before committing the changes, so css/style.css and css/responsive.css will have
-the newest code.
+
+Javascript
+==========
+
+HTML5Boilerplate suggests to have all Javascript plugins in plugins.js and all
+user scripts in script.js. We have decided to go against it, and we are using
+Plone's default javascript registry. The final result is the same, as Plone does
+merge and minimize all the registered javascripts.
+
+Javascript/script.js holds helper functions that are taken from Mobile HTML5
+Boilerplate project and also some functions for the mobile version of the theme.
+(temporarily removed)
+Every additional javascript should go into this file. If you need multiple files
+for javascript, just create them in the javascript folder and include them in
+Plone's JS registry (profiles/default/jsregistry.xml).
+
+
+
+Plone.app.theming
+=================
+
+index.html is the main template that we use, so to have a custom layout, you'll
+need to modify this file. The header tag holds the header of the site, the div
+with id="visual-portal-wrapper" should hold the body region, and the footer tag
+should hold the footer.
+
+Some selectors in Plone rely on having the visual-portal-wrapper id present, so
+we have just included an additional wrapper div within the main div.
+
+The mobile version of the theme has a slightly different layout for the menu and
+search, so we have included additional elements in our main layout and updated
+the rules. The final generated html has the same structure, so there will be no
+problems with the selectors used by Plone.
+
+rules.xml is the rules file which includes the rules_base.xml, where we have set
+up the copying of the css and javascripts to proper location within the
+index.html, and it also includes rules that copy everything from Plone and put
+it into proper place. Feel free to modify this to suite your needs. Boilerplate
+encourages us to have the styles and javascript inclusions in specific place,
+so please don't modify the rules that make this happen.
+
+Within the less files, there are relative paths to some images, and Diazo will
+append a previously set prefix on them, even though we actually don't want that.
+One of the solutions would be to split the CSS files into two groups, the one
+that need prefix applied, and ones that don't. Html 5 Boilerplate suggests to
+have all the styles in one file, so we decided not to modify the structure, but
+to include the missing images in our theme. This way we don't rely on other
+products and we can easily update the images to suite our needs.
 
 
 Structure of less files
@@ -127,22 +152,6 @@ mode. To prevent this, the css that holds the media queries have been moved
 outside of portal css and it's included directly in index.html.
 
 
-Javascript
-==========
-
-HTML5Boilerplate suggests to have all Javascript plugins in plugins.js and all
-user scripts in script.js. We have decided to go against it, and we are using
-Plone's default javascript registry. The final result is the same, as Plone does
-merge and minimize all the registered javascripts.
-
-Javascript/script.js holds helper functions that are taken from Mobile HTML5
-Boilerplate project and also some functions for the mobile version of the theme.
-(temporarily removed)
-Every additional javascript should go into this file. If you need multiple files
-for javascript, just create them in the javascript folder and include them in
-Plone's JS registry (profiles/default/jsregistry.xml).
-
-
 Javascript position within the page
 -----------------------------------
 The default behavior for 'script' tags are to be moved to the bottom of the
@@ -162,39 +171,6 @@ To move the tag to the beginning of the body, set the data-js-move attribute
 to 'js-move-to-beginning-of-body':
 
     <script src="foo.js" data-js-move="js-move-to-beginning-of-body"></script>
-
-
-Plone.app.theming
-=================
-
-index.html is the main template that we use, so to have a custom layout, you'll
-need to modify this file. The header tag holds the header of the site, the div
-with id="visual-portal-wrapper" should hold the body region, and the footer tag
-should hold the footer.
-
-Some selectors in Plone rely on having the visual-portal-wrapper id present, so
-we have just included an additional wrapper div within the main div.
-
-The mobile version of the theme has a slightly different layout for the menu and
-search, so we have included additional elements in our main layout and updated
-the rules. The final generated html has the same structure, so there will be no
-problems with the selectors used by Plone.
-
-rules.xml is the rules file which includes the rules_base.xml, where we have set
-up the copying of the css and javascripts to proper location within the
-index.html, and it also includes rules that copy everything from Plone and put
-it into proper place. Feel free to modify this to suite your needs. Boilerplate
-encourages us to have the styles and javascript inclusions in specific place,
-so please don't modify the rules that make this happen.
-
-Within the less files, there are relative paths to some images, and Diazo will
-append a previously set prefix on them, even though we actually don't want that.
-One of the solutions would be to split the CSS files into two groups, the one
-that need prefix applied, and ones that don't. Html 5 Boilerplate suggests to
-have all the styles in one file, so we decided not to modify the structure, but
-to include the missing images in our theme. This way we don't rely on other
-products and we can easily update the images to suite our needs.
-
 
 Exceptions
 ----------
@@ -447,12 +423,71 @@ iPad Landscape: 1024 x  748
 iPad Portrait:   768 x 1004
 
 
+Retina images
+-------------
+To use the full potential of the retina screens, we should provide images in
+double the resolution. The filename of these images should be the same as the
+regular one's, just with a '@2x' postfix (image.png and image@2x.png). Also you
+need to put a 'retina' class attribute to the image tag in order for it to be
+switched for retina displays.
+If the image is set by CSS, there is a neat less mixin that can be used for it:
+
+    .at2x('../images/add_icon_gray.png', 13px, 13px);
+
+
 Using CSS3 properties
 ---------------------
 Not all browsers support CSS3 yet, so we need to keep in mind when we are
 developing a new theme. Create everything with CSS2 first, and only after
 enhance it with CSS3 goodness. This way browsers that do not support CSS3 will
 fall back to the CSS2, and still look pretty decent.
+
+
+
+Create a new theme with ZopeSkel
+================================
+To create a new theme with this ZopeSkel template, run:
+
+    ./bin/zopeskel diazo_theme my.theme
+
+Where my.theme is the name of your package. Answer a few questions, or just hit
+enter to get the default values. Move the new package to the src folder and edit
+your buildout to include the newly created package. In the buildout section add:
+
+    develop =
+        src/my.theme
+
+And in the instance section add:
+
+    eggs =
+        my.theme
+
+Don't forget to run the buildout after these changes.
+
+
+Package content
+================
+
+  * browser
+  * docs
+  * locales
+  * profiles
+  * theme_resources
+    * css - holds the generated css that is actually used by plone
+    * images - holds all the images used by the theme
+    * javascript - holds all the javascripts used by the theme
+    * less - holds all the less files that will produce the css
+        * bootstrap - Twitter Bootstrap less files
+        * plone - Plone theme specific less files
+        * style.less - main less file that includes all the other files in the
+        appropriate places.
+        * responsive.less - styles that are for responsive design
+        * mixins.less - commonly used less mixins
+        * variables.less - less variables for quick styling
+    * index.html - main template used by plone.app.theming
+    * rules.xml - rules file used by plone.app.theming
+    * rules_base.xml - Diazo rules that are shared among themes
+    * manifest.cfg - settings page for plone.app.theming
 
 
 New theme roll-out checklist
