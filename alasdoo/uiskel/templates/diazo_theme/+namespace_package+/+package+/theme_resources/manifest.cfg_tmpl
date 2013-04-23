@@ -2,6 +2,7 @@
 title = ${namespace_package}.${package} theme
 description = Generated with alasdoo.uiskel
 doctype = <!doctype html>
+preview = images/preview.png
 
 [theme:parameters]
 tabletleftcolumndown = python: True
