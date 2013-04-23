@@ -19,8 +19,8 @@ Twitter Bootstrap
 Twitter Boostrap was used as a starting point for styling and we ended up with
 a fully customized version of it by stripping out parts that we don't use and
 putting in extra styles that are needed by Plone. We packaged in the basic
-bootstrap's styles, so they just need to be enabled in order to use the stripped
-out parts.
+bootstrap's styles as well, so they just need to be enabled in order to use the
+stripped out parts.
 The javascript plugins are also included.
 
 
@@ -51,18 +51,6 @@ and the less files are compiled before they are used by Plone. We are using
 CodeKit for the compiling and it needs to be set up so the output of style.less
 goes to our css folder.
 
-Setting up CodeKit
-------------------
-
-Add the less folder from theme_resources to CodeKit. Select less/style.less and
-less/response.less and set it's CSS Output Path to point to theme_resources/css.
-Usually the output folder is set like this, so you just need to make sure this
-is the case.
-
-After each update to the files, CodeKit will recompile style.less and
-responsive.less automatically, so just reload your page (if zope is in debug
-mode).
-
 
 Javascript
 ==========
@@ -72,11 +60,9 @@ user scripts in script.js. We have decided to go against it, and we are using
 Plone's default javascript registry. The final result is the same, as Plone does
 merge and minimize all the registered javascripts.
 
-Javascript/script.js holds helper functions that are taken from Mobile HTML5
-Boilerplate project and also some functions for the mobile version of the theme.
-(temporarily removed)
-Every additional javascript should go into this file. If you need multiple files
-for javascript, just create them in the javascript folder and include them in
+Javascript/script.js holds the javascript functions for the theme. Every
+additional javascript should go into this file. If you need multiple files for
+javascript, just create them in the javascript folder and include them in
 Plone's JS registry (profiles/default/jsregistry.xml).
 
 
@@ -101,7 +87,7 @@ rules.xml is the rules file which includes the rules_base.xml, where we have set
 up the copying of the css and javascripts to proper location within the
 index.html, and it also includes rules that copy everything from Plone and put
 it into proper place. Feel free to modify this to suite your needs. Boilerplate
-encourages us to have the styles and javascript inclusions in specific place,
+encourages us to have the styles and javascript inclusions in specific places,
 so please don't modify the rules that make this happen.
 
 Within the less files, there are relative paths to some images, and Diazo will
@@ -127,7 +113,7 @@ in appropriate files.
 
 The starting point for this project was the Twitter Bootstrap, so we took the
 needed styles from there, modified them to apply to Plone's markup and polished
-it out for a final professional look.
+them out for a final professional look.
 
 For fast development, we need a quick way to change the default colors and
 styling to reflect the design we are implementing, so we have modified the
@@ -193,7 +179,7 @@ Setting the width of the portal columns using the Deco grid will produce a fluid
 width of the left and right columns. In some cases we need fixed with sidebars,
 so special care has been been put into supporting this feature. In
 variables.less the width can be set either to fixed number of pixels, or
-percentages:
+percentages for variable widths:
 
     @sidebar-right-width: 300px; // or 25%
     @sidebar-left-width: 200px; // or 25%
@@ -301,8 +287,9 @@ width attribute needs to be update to match the size of the logo.
     </a>
 
 
-Show portal-personaltools only when the user is logged in
----------------------------------------------------------
+Show content only when the user is logged in
+--------------------------------------------
+For example we want to show portal-personaltools only for logged in users.
 In rules.xml add:
 
     <before css:content="#portal-personaltools-wrapper"
@@ -327,7 +314,9 @@ then you just can't drop it and append it to another place, but you have to drop
 it and use method="raw" to include it in the other location:
 
     <drop css:content="#portal-breadcrumbs"/>
-    <replace css:content="#portal-breadcrumbs" css:theme="#portal-breadcrumbs" method="raw" />
+    <replace css:content="#portal-breadcrumbs"
+             css:theme="#portal-breadcrumbs"
+             method="raw" />
 
 
 Fix for IE7 hasLayout bug
@@ -367,9 +356,9 @@ appropriate less file.
 Using custom fonts
 ------------------
 @Font-Face is used for applying custom fonts. The preferred way is to have the
-font files on your server and use that, and the other way would be to use
-Google Font API or FontSquirrel. Both are free and have big font collection that
-are licensed for web.
+font files on your server and use that. The other way would be to use Google
+Font API or FontSquirrel. Both are free and have big font collection that are
+licensed for web.
 With google, only a stylesheet is added to the page, which points to their
 server and they will provide all the font files that are needed.
 With FontSquirrel you download everything and serve it from your server.
@@ -391,7 +380,7 @@ Display the value of the parameter as a content of an element:
 
     <xsl:value-of select="$tabletleftcolumndown"/>
 
-Use the parameter for an if statement:
+Use the parameter for an if-statement:
 
     <rules if="$tabletleftcolumndown">
 or:
@@ -412,13 +401,13 @@ splash. We are using these media queries only for the splash, as for the icons
 we can use sizes attribute which is backward compatible.
 
 Application icons:
-iPhone4: 114 x 114
-iPhone3:  57 x  57
-iPad:     72 x  72
+iPhone4/5: 114 x 114
+iPhone3:    57 x  57
+iPad:       72 x  72
 
 Splash screen:
-iPhone4: 640 x 920
-iPhone3: 320 x 460
+iPhone4/5:       640 x  920
+iPhone3:         320 x  460
 iPad Landscape: 1024 x  748
 iPad Portrait:   768 x 1004
 
@@ -427,7 +416,7 @@ Retina images
 -------------
 To use the full potential of the retina screens, we should provide images in
 double the resolution. The filename of these images should be the same as the
-regular one's, just with a '@2x' postfix (image.png and image@2x.png). Also you
+original one's, just with a '@2x' postfix (image.png and image@2x.png). Also you
 need to put a 'retina' class attribute to the image tag in order for it to be
 switched for retina displays.
 If the image is set by CSS, there is a neat less mixin that can be used for it:
@@ -437,7 +426,7 @@ If the image is set by CSS, there is a neat less mixin that can be used for it:
 
 Using CSS3 properties
 ---------------------
-Not all browsers support CSS3 yet, so we need to keep in mind when we are
+Not all browsers support CSS3 yet, so we need to keep it in mind when we are
 developing a new theme. Create everything with CSS2 first, and only after
 enhance it with CSS3 goodness. This way browsers that do not support CSS3 will
 fall back to the CSS2, and still look pretty decent.
@@ -486,8 +475,21 @@ Package content
         * variables.less - less variables for quick styling
     * index.html - main template used by plone.app.theming
     * rules.xml - rules file used by plone.app.theming
-    * rules_base.xml - Diazo rules that are shared among themes
+    * rules_base.xml - Diazo rules that are common to all themes
     * manifest.cfg - settings page for plone.app.theming
+
+
+Setting up CodeKit
+==================
+
+Add the less folder from theme_resources to CodeKit. Select less/style.less and
+less/response.less and set it's CSS Output Path to point to theme_resources/css.
+Usually the output folder is set like this, so you just need to make sure this
+is the case.
+
+After each update to the files, CodeKit will recompile style.less and
+responsive.less automatically, so just reload your page (if zope is in debug
+mode).
 
 
 New theme roll-out checklist
