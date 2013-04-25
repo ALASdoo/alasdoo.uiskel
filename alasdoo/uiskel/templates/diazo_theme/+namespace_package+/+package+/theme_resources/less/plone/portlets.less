@@ -41,6 +41,9 @@
         text-transform: uppercase;
     }
     .portletItem {
+        a {
+            color: @portletNavigationColor;
+        }
         .navTreeLevel0 {
             margin-left: 0;
             list-style: none;
@@ -50,9 +53,13 @@
                 border: 1px solid #ddd;
 
                 &:hover {
-                    background-color: @grayLighter;
-                    border-color: #ddd;
+                    background-color: @portletNavigationHoverBackground;
+                    border-color: @portletNavigationHoverBorder;
                     z-index: 2;
+
+                    a {
+                        color: @portletNavigationHoverColor;
+                    }
                 }
                 &:first-child {
                     .border-top-radius(4px);
@@ -68,8 +75,8 @@
                     line-height: @baseLineHeight;
 
                     &.navTreeCurrentItem {
-                        background-color: @grayLighter;
-                        border-color: #ddd;
+                        background-color: @portletNavigationCurrentBackground;
+                        border-color: @portletNavigationCurrentBorder;
                         cursor: default;
                     }
                 }
@@ -91,12 +98,10 @@
                         margin-bottom: 10px;
                     }
                 }
-
-                .navTreeCurrentItem {
-                    color: @gray;
-                }
             }
-
+        }
+        .navTreeCurrentItem {
+            color: @portletNavigationCurrentColor;
         }
         .navTreeItem > a > img {
             display: none;

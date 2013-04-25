@@ -2681,6 +2681,9 @@ input.context.active {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
 }
+.portletNavigationTree .portletItem a {
+  color: #0088cc;
+}
 .portletNavigationTree .portletItem .navTreeLevel0 {
   margin-left: 0;
   list-style: none;
@@ -2691,8 +2694,11 @@ input.context.active {
 }
 .portletNavigationTree .portletItem .navTreeLevel0 > li:hover {
   background-color: #eeeeee;
-  border-color: #ddd;
+  border-color: #dddddd;
   z-index: 2;
+}
+.portletNavigationTree .portletItem .navTreeLevel0 > li:hover a {
+  color: #005580;
 }
 .portletNavigationTree .portletItem .navTreeLevel0 > li:first-child {
   -webkit-border-top-right-radius: 4px;
@@ -2719,7 +2725,7 @@ input.context.active {
 .portletNavigationTree .portletItem .navTreeLevel0 > li > a.navTreeCurrentItem,
 .portletNavigationTree .portletItem .navTreeLevel0 > li > div > a.navTreeCurrentItem {
   background-color: #eeeeee;
-  border-color: #ddd;
+  border-color: #dddddd;
   cursor: default;
 }
 .portletNavigationTree .portletItem .navTreeLevel0 > img {
@@ -2736,7 +2742,7 @@ input.context.active {
 .portletNavigationTree .portletItem .navTreeLevel0 .navTree > li:last-child {
   margin-bottom: 10px;
 }
-.portletNavigationTree .portletItem .navTreeLevel0 .navTree .navTreeCurrentItem {
+.portletNavigationTree .portletItem .navTreeCurrentItem {
   color: #555555;
 }
 .portletNavigationTree .portletItem .navTreeItem > a > img {
