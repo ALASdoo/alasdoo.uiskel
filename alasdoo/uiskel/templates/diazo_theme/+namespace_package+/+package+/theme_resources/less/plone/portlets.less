@@ -55,9 +55,11 @@
                 &:hover {
                     background-color: @portletNavigationHoverBackground;
                     border-color: @portletNavigationHoverBorder;
+                    color: @portletNavigationHoverColor;
                     z-index: 2;
 
-                    a {
+                    a,
+                    .navTreeCurrentItem {
                         color: @portletNavigationHoverColor;
                     }
                 }
@@ -85,6 +87,7 @@
                 max-width: none;
             }
 
+            // sublevels
             .navTree {
                 > li {
                     position: relative;
@@ -97,6 +100,10 @@
                     &:last-child {
                         margin-bottom: 10px;
                     }
+                }
+
+                .navTreeCurrentItem {
+                    color: @portletNavigationSublevelColor;
                 }
             }
         }
