@@ -2,6 +2,51 @@
 // Edit bar
 // --------------------------------------------------
 
+// Edit buttons
+// ---------------------
+#edit-buttons {
+    float: right;
+    background: @white;
+    background: rgba(255,255,255,.3);
+    padding: 0 10px;
+    .border-radius(@baseBorderRadius);
+
+    .edit-btn {
+        padding: 3px;
+        line-height: 36px;
+        text-decoration: none;
+    }
+    .dropdown-menu {
+        margin-top: 5px;
+        margin-right: -5px;
+
+        &:before {
+          content: '';
+          display: inline-block;
+          border-left:   7px solid transparent;
+          border-right:  7px solid transparent;
+          border-bottom: 7px solid #ccc;
+          border-bottom-color: @dropdownBorder;
+          position: absolute;
+          top: -7px;
+          right: 11px;
+        }
+        &:after {
+          content: '';
+          display: inline-block;
+          border-left:   6px solid transparent;
+          border-right:  6px solid transparent;
+          border-bottom: 6px solid @dropdownBackground;
+          position: absolute;
+          top: -6px;
+          right: 12px;
+        }
+    }
+}
+
+// Edit bar - deprecated
+// ---------------------
+
 #edit-bar,
 .formTabs {
     border-bottom: 1px solid #ddd; // Give the tabs something to sit on

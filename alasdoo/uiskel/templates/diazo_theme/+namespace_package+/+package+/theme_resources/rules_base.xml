@@ -100,7 +100,30 @@
 
     <!-- BODY -->
 
-    <replace css:content-children="#portal-column-content" css:theme-children="#portal-column-content" />
+    <append css:content-children="#portal-column-content" css:theme="#portal-column-content" />
+
+    <!-- Edit bar -->
+    <drop css:content="#edit-bar, #contentview-view, #contentview-edit, #plone-contentmenu-factories" />
+    <drop css:theme="#edit-buttons" css:if-not-content="#edit-bar" />
+
+    <!-- View button -->
+    <copy attributes="href" css:content="#contentview-view a" css:theme=".view-menu" />
+    <drop css:theme=".view-menu" css:if-content="#contentview-view.selected" />
+
+    <!-- Edit button -->
+    <copy attributes="href" css:content="#contentview-edit a" css:theme=".edit-menu" />
+    <drop css:theme=".edit-menu" css:if-content="#contentview-edit.selected" />
+
+    <!-- Add new button -->
+    <replace css:content-children="#plone-contentmenu-factories .actionMenuContent > ul"
+             css:theme-children="#add-new-dropdown" />
+    <copy attributes="title" css:content="#plone-contentmenu-factories .actionMenuHeader > a" css:theme=".add-menu" />
+    <drop css:theme=".add-menu" css:if-not-content="#plone-contentmenu-factories" />
+
+    <!-- More button -->
+    <append css:content-children="#content-views > li, #contentActionMenus > li"
+            css:theme="#more-dropdown" />
+
 
     <!-- Drop class attribute from portal-column-one/two -->
     <drop attributes="class" css:content="#portal-column-one" />

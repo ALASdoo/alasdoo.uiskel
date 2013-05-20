@@ -80,13 +80,40 @@
 
     <div id="main" role="main" class="clearfix">
         <div id="visual-portal-wrapper">
-            <div id="mobile-page-settings" class="hide">
+<!--             <div id="mobile-page-settings" class="hide">
                 Page Settings
-            </div>
+            </div> -->
             <div id="portal-columns" class="row">
                 <div id="portal-column-main">
                     <div id="portal-column-wrapper">
-                        <div id="portal-column-content"></div>
+                        <div id="portal-column-content">
+
+                            <div id="edit-buttons">
+                              <a href="#" class="edit-btn view-menu" title="View">
+                                <!-- TODO: make the title attribute dynamic -->
+                                <i class="icon-eye-open"></i>
+                              </a>
+
+                              <a href="#" class="edit-btn edit-menu" title="Edit">
+                                <!-- TODO: make the title attribute dynamic -->
+                                <i class="icon-pencil"></i>
+                              </a>
+
+                              <span class="dropdown">
+                                <a href="#" data-toggle="dropdown" class="edit-btn dropdown-toggle add-menu" title="Add new...">
+                                    <i class="icon-plus"></i>
+                                </a>
+                                <ul id="add-new-dropdown" class="dropdown-menu pull-right" role="menu"></ul>
+                              </span>
+
+                              <span class="dropdown">
+                                <a href="#" data-toggle="dropdown" class="edit-btn dropdown-toggle more-menu">
+                                  <i class="icon-align-justify"></i>
+                                </a>
+                                <ul id="more-dropdown" class="dropdown-menu pull-right" role="menu"></ul>
+                              </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
