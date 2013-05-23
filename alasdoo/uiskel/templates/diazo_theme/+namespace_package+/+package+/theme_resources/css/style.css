@@ -3056,6 +3056,9 @@ input.context.active {
 .portletNavigationTree .portletItem .navTreeItem > a > img {
   display: none;
 }
+.portletNavigationTree .portletItem [class^="contenttype-"]:before {
+  display: none;
+}
 .portletCalendar {
   padding: 10px 15px;
   border: 1px solid #ddd;
