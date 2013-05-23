@@ -2663,7 +2663,14 @@ footer {
 #edit-buttons .actionMenu.activated dd {
   position: relative;
   float: none;
+  top: 0;
   margin: 0 10px 10px;
+}
+.ie7 #edit-buttons .actionMenu {
+  margin-left: 0px;
+}
+.ie7 #edit-buttons .actionMenu .actionMenuHeader {
+  padding: 0 20px;
 }
 .dropdown-submenu {
   position: relative;

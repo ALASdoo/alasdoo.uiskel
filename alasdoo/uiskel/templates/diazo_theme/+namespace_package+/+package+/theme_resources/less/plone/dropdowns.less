@@ -173,16 +173,29 @@
 
 // Sub menus
 // ---------------------------
-#edit-buttons .actionMenuContent {
-  color: @textColor;
-}
-#edit-buttons .actionMenu.activated {
-  padding-bottom: 5px;
+#edit-buttons {
+  .actionMenuContent {
+    color: @textColor;
+  }
+  .actionMenu.activated {
+    padding-bottom: 5px;
 
-  dd {
-    position: relative;
-    float: none;
-    margin: 0 10px 10px;
+    dd {
+      position: relative;
+      float: none;
+      top: 0;
+      margin: 0 10px 10px;
+    }
+  }
+}
+
+.ie7 {
+  #edit-buttons .actionMenu {
+    margin-left: 0px;
+
+    .actionMenuHeader {
+      padding: 0 20px;
+    }
   }
 }
 
