@@ -84,16 +84,31 @@
 
     <!-- HEADER -->
 
-    <before css:content="#portal-personaltools-wrapper"
-            css:theme="#portal-logo" />
+    <!-- Personal tools -->
+    <!-- Anonymous users -->
+    <replace css:content="#portal-personaltools #personaltools-login"
+             css:theme-children="#portal-personaltools"
+             css:if-content="#portal-personaltools #personaltools-login" />
+    <!-- Logged in users -->
+    <replace attributes="href"
+             css:content="#portal-personaltools .actionMenuHeader a"
+             css:theme="#portal-personaltools #user-name" />
+    <replace css:content-children="#portal-personaltools .actionMenuHeader a"
+             css:theme-children="#portal-personaltools #user-name" />
+    <replace css:content-children="#portal-personaltools .actionMenuContent ul"
+             css:theme-children="#portal-personaltools #personaltools-dropdown" />
+    <drop attributes="id" css:content="#portal-personaltools .actionMenuContent li" />
 
+    <!-- Logo -->
     <copy attributes="href title" css:content="#portal-logo" css:theme="#portal-logo" />
     <copy attributes="title alt" css:content="#portal-logo > img" css:theme="#portal-logo > img" />
 
+    <!-- Search box -->
     <after css:content="#portal-searchbox" css:theme="#mobile-menu" />
     <drop css:content=".searchSection" />
     <drop css:content="#portal-advanced-search" />
 
+    <!-- Navigation -->
     <replace css:content="#portal-globalnav" css:theme-children=".navbar-inner" />
 
 

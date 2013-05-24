@@ -1834,15 +1834,9 @@ footer {
   margin: 20px 0 10px 0;
 }
 #portal-personaltools {
-  position: absolute;
-  z-index: 3;
-  /* personaltools should be above #portal-header (with z-index: 2) */
-
-  top: 0;
-  right: 0;
+  float: right;
   padding: 0.25em 0.5em;
   margin: 0;
-  list-style: none;
   border: 1px solid #d4d4d4;
   -webkit-border-bottom-right-radius: 0.5em;
   -moz-border-radius-bottomright: 0.5em;
@@ -1862,35 +1856,14 @@ footer {
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
 }
-#portal-personaltools .actionMenuHeader a {
-  font-size: 11.9px;
-}
-#portal-personaltools .actionMenuContent a {
-  display: block;
-  padding: 8px 12px;
-  line-height: 20px;
-  border: 1px solid transparent;
-  -webkit-border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
-  border-radius: 4px 4px 0 0;
-}
-#portal-personaltools .actionMenuContent a:hover {
-  text-decoration: none;
-  background-color: #eeeeee;
-  border-color: #eeeeee #eeeeee #dddddd;
-}
-#portal-personaltools a {
+#portal-personaltools #user-name,
+#portal-personaltools #personaltools-login {
   color: #555555;
+  font-size: 11.9px;
+  text-decoration: none;
 }
-#portal-personaltools dt {
-  font-weight: normal;
-}
-#portal-personaltools dt.actionMenuHeader a:after {
+#portal-personaltools #user-name:after {
   content: " ▼";
-}
-#portal-personaltools dd {
-  right: 0;
-  left: auto;
 }
 #search-and-links {
   position: absolute;
@@ -3239,7 +3212,9 @@ input.context.active {
   color: #666666;
 }
 #LSResult img,
-.LSResult img {
+.LSResult img,
+#LSResult [class^="contenttype-"]:before,
+.LSResult [class^="contenttype-"]:before {
   display: none;
 }
 #livesearchLegend {

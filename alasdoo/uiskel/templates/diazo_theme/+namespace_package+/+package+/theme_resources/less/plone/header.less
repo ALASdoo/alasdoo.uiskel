@@ -15,47 +15,23 @@
 // --------------------------
 
 #portal-personaltools {
-    position: absolute;
-    z-index: 3; /* personaltools should be above #portal-header (with z-index: 2) */
-    top: 0;
-    right: 0;
+    float: right;
     padding: 0.25em 0.5em;
     margin: 0;
-    list-style: none;
     border: 1px solid @navbarBorder;
+
     .border-bottom-radius(0.5em);
     #gradient > .vertical(@navbarBackground, @navbarBackgroundHighlight);
     .box-shadow(0 1px 4px rgba(0,0,0,.065));
 
-    .actionMenuHeader a {
-        font-size: @fontSizeSmall;
-    }
-    .actionMenuContent a {
-        display: block;
-        padding: 8px 12px;
-        line-height: @baseLineHeight;
-        border: 1px solid transparent;
-        .border-radius(@baseBorderRadius @baseBorderRadius 0 0);
-
-        &:hover {
-            text-decoration: none;
-            background-color: @grayLighter;
-            border-color: @grayLighter @grayLighter #ddd;
-        }
-    }
-    a {
+    #user-name,
+    #personaltools-login {
         color: @gray;
+        font-size: @fontSizeSmall;
+        text-decoration: none;
     }
-    dt {
-        font-weight: normal;
-
-        &.actionMenuHeader a:after {
-            content: " ▼";
-        }
-    }
-    dd {
-        right: 0;
-        left: auto;
+    #user-name:after {
+        content: " ▼";
     }
 }
 
