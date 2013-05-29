@@ -4,6 +4,7 @@ Changelog
 1.0rc1 (2013-04-XX)
 -------------------
 
+- Bootstrap's JS should not be compressed [vsomogyi]
 - Upgrade to Bootstrap 2.3.2 [vsomogyi]
 - New edit bar added [vsomogyi]
 - Bootstrap independence [vsomogyi]

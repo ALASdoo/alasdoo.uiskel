@@ -16,7 +16,7 @@
     <!-- BOOTSTRAP - Affix -->
     <javascript
         cacheable="True"
-        compression="safe"
+        compression="none"
         conditionalcomment=""
         cookable="True"
         enabled="True"
@@ -28,7 +28,7 @@
     <!-- BOOTSTRAP - Alert -->
     <javascript
         cacheable="True"
-        compression="safe"
+        compression="none"
         conditionalcomment=""
         cookable="True"
         enabled="True"
@@ -40,7 +40,7 @@
     <!-- BOOTSTRAP - Button -->
     <javascript
         cacheable="True"
-        compression="safe"
+        compression="none"
         conditionalcomment=""
         cookable="True"
         enabled="True"
@@ -52,7 +52,7 @@
     <!-- BOOTSTRAP - Carousel -->
     <javascript
         cacheable="True"
-        compression="safe"
+        compression="none"
         conditionalcomment=""
         cookable="True"
         enabled="True"
@@ -64,7 +64,7 @@
     <!-- BOOTSTRAP - Collapse -->
     <javascript
         cacheable="True"
-        compression="safe"
+        compression="none"
         conditionalcomment=""
         cookable="True"
         enabled="True"
@@ -76,7 +76,7 @@
     <!-- BOOTSTRAP - Dropdown -->
     <javascript
         cacheable="True"
-        compression="safe"
+        compression="none"
         conditionalcomment=""
         cookable="True"
         enabled="True"
@@ -88,7 +88,7 @@
     <!-- BOOTSTRAP - Modal -->
     <javascript
         cacheable="True"
-        compression="safe"
+        compression="none"
         conditionalcomment=""
         cookable="True"
         enabled="True"
@@ -100,7 +100,7 @@
     <!-- BOOTSTRAP - Popover -->
     <javascript
         cacheable="True"
-        compression="safe"
+        compression="none"
         conditionalcomment=""
         cookable="True"
         enabled="True"
@@ -112,7 +112,7 @@
     <!-- BOOTSTRAP - Scrollspy -->
     <javascript
         cacheable="True"
-        compression="safe"
+        compression="none"
         conditionalcomment=""
         cookable="True"
         enabled="True"
@@ -124,7 +124,7 @@
     <!-- BOOTSTRAP - Tab -->
     <javascript
         cacheable="True"
-        compression="safe"
+        compression="none"
         conditionalcomment=""
         cookable="True"
         enabled="True"
@@ -136,7 +136,7 @@
     <!-- BOOTSTRAP - Tooltip -->
     <javascript
         cacheable="True"
-        compression="safe"
+        compression="none"
         conditionalcomment=""
         cookable="True"
         enabled="True"
@@ -149,7 +149,7 @@
     <!-- BOOTSTRAP - Transition -->
     <javascript
         cacheable="True"
-        compression="safe"
+        compression="none"
         conditionalcomment=""
         cookable="True"
         enabled="True"
@@ -161,7 +161,7 @@
     <!-- BOOTSTRAP - Typeahead -->
     <javascript
         cacheable="True"
-        compression="safe"
+        compression="none"
         conditionalcomment=""
         cookable="True"
         enabled="True"
