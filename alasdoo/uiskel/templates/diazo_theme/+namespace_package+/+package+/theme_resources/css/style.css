@@ -3311,6 +3311,16 @@ footer {
 .image-left {
   float: left;
 }
+.image-right,
+.image-left {
+  margin: 10px;
+}
+.image-right {
+  margin-right: 0;
+}
+.image-left {
+  margin-left: 0;
+}
 .hide {
   display: none;
 }
