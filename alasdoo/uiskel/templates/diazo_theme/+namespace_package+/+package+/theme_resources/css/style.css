@@ -380,6 +380,12 @@ address {
   font-style: normal;
   line-height: 20px;
 }
+.callout {
+  background: none repeat scroll 0 0 #EEEEEE;
+  border-left: 10px solid #CCCCCC;
+  clear: both;
+  padding: 10px;
+}
 .documentFirstHeading {
   padding-bottom: 9px;
   border-bottom: 1px solid #eeeeee;
@@ -3297,10 +3303,12 @@ footer {
 .configlets > li {
   margin: 10px 0;
 }
-.pull-right {
+.pull-right,
+.image-right {
   float: right;
 }
-.pull-left {
+.pull-left,
+.image-left {
   float: left;
 }
 .hide {
