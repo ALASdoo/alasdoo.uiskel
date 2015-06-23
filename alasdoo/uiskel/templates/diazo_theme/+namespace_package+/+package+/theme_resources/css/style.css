@@ -405,21 +405,6 @@ address {
   font-weight: 200;
   line-height: 30px;
 }
-.documentByLine {
-  margin-bottom: 5px;
-  -webkit-transition: opacity .2s linear .5s;
-  -moz-transition: opacity .2s linear .5s;
-  -o-transition: opacity .2s linear .5s;
-  transition: opacity .2s linear .5s;
-  opacity: 0;
-}
-.documentByLine:hover {
-  -webkit-transition: opacity .2s linear .0s;
-  -moz-transition: opacity .2s linear .0s;
-  -o-transition: opacity .2s linear .0s;
-  transition: opacity .2s linear .0s;
-  opacity: 1;
-}
 code,
 pre {
   padding: 0 3px 2px;
@@ -1529,7 +1514,7 @@ body.mceContentBody {
 .icons-on [class^="contenttype-"]:before {
   content: "";
   display: inline-block;
-  width: 16px;
+  width: 18px;
   height: 14px;
   *margin-right: .3em;
   line-height: 14px;
@@ -1546,7 +1531,7 @@ body.mceContentBody {
 }
 .icons-on .contenttype-folder:before {
   background-position: -408px -120px;
-  width: 16px;
+  width: 18px;
 }
 .icons-on .contenttype-link:before {
   background-position: -336px -144px;
@@ -1754,6 +1739,31 @@ footer {
   position: relative;
   z-index: 1030;
 }
+.wide-bg#container,
+.wide-bg footer {
+  margin: 0;
+  width: 100%;
+  max-width: none;
+}
+.wide-bg #portal-top,
+.wide-bg #visual-portal-wrapper,
+.wide-bg #portal-footer-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1088px;
+  word-wrap: break-word;
+}
+.wide-bg #portal-header,
+.wide-bg #visual-portal,
+.wide-bg #portal-footer,
+.wide-bg #portal-colophon,
+.wide-bg #portal-siteactions {
+  margin: 0 13px;
+}
+.ie7 #container.wide-bg,
+.ie8 #container.wide-bg {
+  margin: 0 auto;
+}
 #portal-column-main {
   display: block;
   float: left;
@@ -1838,6 +1848,9 @@ footer {
 #portal-logo {
   display: inline-block;
   margin: 20px 0 10px 0;
+}
+#portal-logo img {
+  width: 100%;
 }
 #portal-personaltools {
   float: right;

@@ -26,7 +26,21 @@
   box-sizing: border-box;
 }
 @media only screen and (min-width: 801px) {
-  
+  .documentByLine {
+    margin-bottom: 5px;
+    -webkit-transition: opacity .2s linear .5s;
+    -moz-transition: opacity .2s linear .5s;
+    -o-transition: opacity .2s linear .5s;
+    transition: opacity .2s linear .5s;
+    opacity: 0;
+  }
+  .documentByLine:hover {
+    -webkit-transition: opacity .2s linear .0s;
+    -moz-transition: opacity .2s linear .0s;
+    -o-transition: opacity .2s linear .0s;
+    transition: opacity .2s linear .0s;
+    opacity: 1;
+  }
 }
 @media only screen and (min-width: 481px) and (max-width: 800px) {
   .tablet-right-down #portal-column-main {

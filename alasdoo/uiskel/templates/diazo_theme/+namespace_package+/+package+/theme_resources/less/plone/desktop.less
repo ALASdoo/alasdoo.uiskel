@@ -10,4 +10,20 @@
     // Custom styling for desktop
     // ----------------------------------------------
 
+
+
+    // Document by line - show on hover
+    // -----------------------------------
+    .documentByLine {
+        margin-bottom: 5px;
+
+        .transition(~"opacity .2s linear .5s");
+        opacity: 0;
+
+        &:hover {
+            .transition(~"opacity .2s linear .0s");
+            opacity: 1;
+        }
+    }
+
 }

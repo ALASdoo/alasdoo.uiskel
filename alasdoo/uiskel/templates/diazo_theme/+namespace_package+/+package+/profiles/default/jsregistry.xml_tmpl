@@ -13,6 +13,18 @@
         id="++theme++${namespace_package}.${package}/javascript/libs/modernizr.custom.js"
     />
 
+    <!-- Disable Modernizr that comes from Plone -->
+    <javascript
+        cacheable="True"
+        compression="safe"
+        conditionalcomment=""
+        cookable="True"
+        enabled="False"
+        expression=""
+        inline="False"
+        id="modernizr.js"
+    />
+
     <!-- BOOTSTRAP - Affix -->
     <javascript
         cacheable="True"

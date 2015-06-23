@@ -39,6 +39,40 @@ footer {
 }
 
 
+// Wide-bg - the background of the header and footer are 100% wide
+// ---------------------------------------------------------------
+.wide-bg {
+    &#container,
+    footer {
+        margin: 0;
+        width: 100%;
+        max-width: none;
+    }
+
+    #portal-top,
+    #visual-portal-wrapper,
+    #portal-footer-wrapper {
+        margin: @bodyMargin;
+        width: @bodyWidth;
+        max-width: @bodyMaxWidth;
+        word-wrap: break-word;
+    }
+
+    #portal-header,
+    #visual-portal,
+    #portal-footer,
+    #portal-colophon,
+    #portal-siteactions {
+        margin: @containerMargin;
+    }
+}
+.ie7, .ie8 {
+    #container.wide-bg {
+        margin: 0 auto;
+    }
+}
+
+
 // Portal columns
 // -----------------------------------
 
