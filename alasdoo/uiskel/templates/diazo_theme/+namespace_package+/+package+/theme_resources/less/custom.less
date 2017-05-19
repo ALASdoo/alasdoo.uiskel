@@ -1,3 +1,45 @@
 //
 // Custom theme specific styling
 // --------------------------------------------------
+
+// Search
+//---------------
+#search-and-links {
+    right: 0;
+}
+#portal-searchbox {
+    border: 1px solid #E2E2E2;
+    .border-radius(@baseBorderRadius);
+
+    form {
+        margin-bottom: 0;
+    }
+    .searchField {
+        border: 0;
+        .box-shadow(none);
+    }
+    .searchButton {
+        display: inline-block;
+
+        // background-image: url("../images/search_icon.png");
+        .at2x("../images/search_icon.png", 12px, 12px);
+        background-position: 10px 6px;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: 0;
+        text-indent: -99999px;
+        width: 30px;
+    }
+}
+
+.portletNavigationTree {
+    .portletItem .navTreeLevel0{
+         > li {
+            background: #fff;
+
+            &:hover {
+            	// background: #f5f5f5;
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+.fc-header {
+    .fc-state-default {
+        &, a {
+            border-color: #777777;
+            color: #333333;
+        }
+        span {
+            background: none repeat scroll 0 0 #E8E8E8;
+            border-color: #FFFFFF #FFFFFF #D1D1D1;
+        }
+    }
+
+    .fc-state-active a {
+        color: #FFFFFF;
+    }
+
+    .fc-state-down span,
+    .fc-state-active span {
+        background: none repeat scroll 0 0 #888888;
+        border-color: #808080 #808080 #909090;
+    }
+
+    .fc-state-disabled a {
+        color: #999999;
+    }
+
+    .fc-state-disabled {
+        &, a {
+            border-color: #CCCCCC;
+        }
+        span {
+            background: none repeat scroll 0 0 #F0F0F0;
+            border-color: #FFFFFF #FFFFFF #F0F0F0;
+        }
+    }
+}
+
+.fc-widget-content {
+    border: 1px solid #CCCCCC;
+}
+.fc-content {
+    .fc-state-default {
+        border-color: #CCCCCC;
+    }
+    .fc-state-highlight {
+        background: none repeat scroll 0 0 #F2F2F2;
+    }
+    .fc-not-today {
+        background: none repeat scroll 0 0 transparent;
+    }
+}
+.fc-cell-overlay {
+    background: none repeat scroll 0 0 #999;
+    opacity: 0.2;
+}
+.fc-event,
+.fc-event a,
+.fc-agenda .fc-event-time {
+    background-color: @linkColor;
+    border-color: @linkColor;
+    border-style: solid;
+    color: #FFFFFF;
+}
+.fc .fc-divider .fc-state-default {
+    background: none repeat scroll 0 0 #EEEEEE;
+}
+.fc-event-vert span.fc-event-bg {
+    background: none repeat scroll 0 0 #FFFFFF;
+}

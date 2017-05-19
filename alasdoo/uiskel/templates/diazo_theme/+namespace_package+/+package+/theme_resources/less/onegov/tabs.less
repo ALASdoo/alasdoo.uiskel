@@ -1,0 +1,67 @@
+// Tabbed view
+// ---------------------
+
+#tabbedview-body .pane {
+    margin-top: 20px;
+}
+.tabbedview-tab-menu {
+    margin-bottom: 0 !important;
+    margin-top: -50px;
+    padding-right: 5px;
+}
+.ie7 {
+    .tabbedview-tab-menu {
+        margin-top: -30px;
+    }
+}
+#info_overview {
+    .listing {
+        th {
+            text-align: center;
+        }
+    }
+}
+// Fix styles that tabbedview.css messed up
+#content .tabbedview-tab-menu .actionMenuContent {
+    background-color: @dropdownBackground;
+    left: auto;
+
+    a:hover {
+        background-color: @grayLighter;
+        color: @linkColorHover !important;
+    }
+}
+
+// Quick search for tabbed view
+.tabbedview_search {
+    float: right;
+    margin-top: -4px;
+    min-width: 180px;
+    position: relative;
+    z-index: 2;
+
+    &:after {
+        content:"";
+        // background: transparent url('../images/search_icon.png') no-repeat;
+        .at2x('../images/search_icon.png', 12px, 12px);
+        background-color: transparent;
+        background-position: 8px 8px;
+        background-repeat: no-repeat;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    #tabbedview-searchbox {
+        padding-left: 23px;
+    }
+}
+
+.ie7 {
+    #tabbedview-searchbox {
+        width: 150px;
+        height: 20px;
+    }
+}

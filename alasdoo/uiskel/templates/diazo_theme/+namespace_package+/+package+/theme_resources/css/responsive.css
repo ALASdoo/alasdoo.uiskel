@@ -294,22 +294,22 @@
     display: block!important;
     visibility: visible;
     cursor: pointer;
-    color: #999999;
+    color: #999;
     text-align: center;
     padding: 5px;
     margin: 10px 0;
-    border: 1px dashed #eeeeee;
+    border: 1px dashed #eee;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
   }
   #mobile-page-settings.selected {
-    background: #eeeeee;
+    background: #eee;
   }
   #edit-bar {
     display: none;
     visibility: hidden;
-    border: 1px dashed #eeeeee;
+    border: 1px dashed #eee;
     *zoom: 1;
   }
   #edit-bar:before,

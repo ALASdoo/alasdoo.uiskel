@@ -1,0 +1,30 @@
+// Dashboard style fix
+.template-dashboard,
+.template-manage-dashboard {
+    .contentViews {
+        display: block;
+        border-bottom: 1px solid #DDD;
+        margin-left: 0;
+
+        .clearfix();
+    }
+}
+
+// style override from dashboard.css
+.portletHeader {
+    cursor: auto;
+}
+.dashboard-column .portletHeader {
+    cursor: move;
+}
+.portletCalendar dt.portletHeader {
+    text-align: center;
+}
+.portletCalendar dt a#calendar-previous {
+    float: left;
+    margin-left: 5px;
+}
+.portletCalendar dt a#calendar-next {
+    float: right;
+    margin-right: 5px;
+}

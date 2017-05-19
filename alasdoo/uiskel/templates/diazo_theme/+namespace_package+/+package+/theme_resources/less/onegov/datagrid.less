@@ -1,0 +1,39 @@
+// extJS fixes
+.x-menu-list {
+    margin-left: 0;
+}
+.x-grid3-row-selected table, .x-grid3-row-selected table:hover {
+    background: #f5f5f5;
+}
+.ftwtable {
+    .linkWrapper {
+        a > img {
+            margin-right: 5px;
+        }
+    }
+}
+
+#content a.datagridwidget-add-button {
+    // background: transparent url('../images/add_icon_gray.png') no-repeat;
+    .at2x('../images/add_icon_gray.png', 13px, 13px);
+    background-color: #FFF;
+    background-repeat: no-repeat;
+    background-position: 5px 5px;
+    border: 1px solid #AAA;
+    color: #777 !important;
+    margin: 5px 0 10px 5px;
+    padding: 2px 5px 2px 25px;
+
+    .border-radius(3px);
+
+    &:hover {
+        .at2x('../images/add_icon.png', 13px, 13px);
+        color: #000 !important;
+    }
+}
+
+// style override from datagridwidget.css
+tr.datagridwidget-row {
+    vertical-align: middle !important;
+}
+

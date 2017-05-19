@@ -1,0 +1,75 @@
+//
+// OneGov styles
+// -----------------------------------------------------
+
+
+@import "activity.less";
+@import "icons.less";
+@import "tabs.less";
+@import "ticketbox.less";
+@import "dashboard.less";
+@import "portlets.less";
+@import "book.less";
+@import "datagrid.less";
+@import "fullcalendar.less";
+@import "simplelayout.less";
+
+
+// List items should not have bullets
+.box ul {
+    margin-left: 0;
+    list-style: none;
+
+    li > span {
+        color: @grayLight;
+        margin-right: 5px;
+    }
+}
+.billboardCategoryListing ul {
+    margin-left: 0;
+    list-style: none;
+}
+
+// Watch icon positioning
+#content {
+    position: relative;
+
+    .documentActions {
+        position: absolute;
+        top: 12px;
+        right: 0;
+
+        #document-action-watch a {
+            display: block;
+            overflow: hidden;
+            text-align: left;
+            text-indent: -9999px;
+            line-height: 0;
+            width: 24px;
+            height: 24px;
+            background: transparent url('../images/follow-icon.gif') no-repeat;
+        }
+    }
+}
+
+#ifc-contentactions {
+    position: absolute;
+    top: 12px;
+    right: 0;
+}
+
+.blockHighlight {
+    background: @breadcrumbsBackground;
+    border-bottom: 1px solid darken(@breadcrumbsBackground, 10%);
+}
+
+.ui-dialog {
+    z-index: @zindexModal;
+}
+
+#overview_overview {
+    h2 {
+        font-size: @fontSizeH3;
+    }
+}
+

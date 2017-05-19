@@ -75,7 +75,13 @@ input[type="reset" ],
     *padding-bottom: 3px;
 }
 
-input.context {
+input.context,
+input.standalone {
     .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+    margin-right: 5px;
+}
+
+input.destructive {
+    .buttonBackground(@btnDestructiveBackground, @btnDestructiveBackgroundHighlight);
     margin-right: 5px;
 }

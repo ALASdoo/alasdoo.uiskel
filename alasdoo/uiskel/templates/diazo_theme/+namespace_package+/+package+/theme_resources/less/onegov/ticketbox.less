@@ -1,0 +1,80 @@
+// Ticketbox edit page
+// -------------------
+
+.ticketbox-overview ul {
+    list-style: none;
+}
+
+#ticket-base-edit {
+    #state,
+    #responsibleManager {
+        display: block;
+    }
+}
+
+// style override from ticketbox.css
+#addResponse {
+    margin-top: 40px;
+}
+.response-adder {
+    dl.collapsible {
+        dt.collapsibleHeader {
+            margin-top: -16px;
+
+            div.add_response {
+                font-size: @fontSizeSmall;
+                .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+                border: 1px solid @btnPrimaryBackground;
+                *border: 0; // Remove the border to prevent IE7's black border on input:focus
+                border-bottom-color: darken(@btnBorder, 10%);
+                font-size: 14px;
+                line-height: 20px;
+                padding: 4px 12px;
+                text-align: center;
+                vertical-align: middle;
+                font-weight: normal;
+
+                .border-radius(@baseBorderRadius);
+                .ie7-restore-left-whitespace(); // Give IE7 some love
+                .box-shadow(~"inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05)");
+
+                // Hover/focus state
+                &:hover,
+                &:focus {
+                    .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+                    text-decoration: none;
+                    background-position: 0 -15px;
+
+                    // transition is only when going to hover/focus, otherwise the background
+                    // behind the gradient (there for IE<=9 fallback) gets mismatched
+                    .transition(background-position .1s linear);
+                }
+            }
+        }
+        dd.collapsibleContent {
+            padding: 5px 20px 0;
+        }
+    }
+    input[type="submit"] {
+        .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+    }
+}
+.response-actions {
+    padding-top: 0;
+}
+.response-reply .response-actions form {
+    margin-bottom: 0;
+}
+
+[id^="ticketbox-filter-"] {
+    ul {
+        margin-left: 0;
+    }
+}
+#ticket_box-base-edit,
+#meeting-base-edit {
+    .field {
+        clear: both;
+    }
+}
+

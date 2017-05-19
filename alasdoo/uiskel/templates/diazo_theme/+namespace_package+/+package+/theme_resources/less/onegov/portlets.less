@@ -1,0 +1,46 @@
+// style override from ftwportlets.css
+#dashboard .portletPostIt {
+    border-bottom: 1px solid #DDD;
+
+    .portletHeader {
+        background: transparent;
+        border-bottom: 1px solid #DDD;
+    }
+    .portletItem {
+        padding: 10px;
+        position: relative;
+
+        &.postIt_note {
+            background-color: #FFF7C2;
+            border: 1px solid #DCC126;
+        }
+        span {
+            #font > .monospace();
+            padding: 0;
+        }
+    }
+    .postIt_addNote {
+        border: 1px solid #DCC126;
+
+        &.odd,
+        &.even {
+            background: transparent;
+        }
+        .text {
+            background-color: #FFF7C2;
+        }
+    }
+    .postIt_remove {
+        position: absolute;
+        top: 0px;
+        right: 5px;
+    }
+}
+
+.portletTagcloud ul {
+    list-style: none;
+
+    li {
+        float: left;
+    }
+}
