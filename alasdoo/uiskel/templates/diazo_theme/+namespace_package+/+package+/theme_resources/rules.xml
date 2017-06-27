@@ -17,7 +17,7 @@
 
     <!-- Language chooser and quick links - not used by default -->
     <drop css:theme="#quicklinks" />
-    <drop css:theme="#languages" />
+    <!-- <drop css:theme="#languages" /> -->
 
 
 </rules>

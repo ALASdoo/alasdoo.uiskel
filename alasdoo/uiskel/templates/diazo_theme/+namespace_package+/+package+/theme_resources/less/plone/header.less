@@ -58,14 +58,6 @@
             white-space: nowrap;
         }
     }
-    #languages li {
-        margin-right: 5px;
-
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-
     #portal-searchbox {
         text-align: left;
 
@@ -73,4 +65,30 @@
             white-space: nowrap;
         }
     }
+}
+
+
+
+
+// Languages
+// --------------------------
+#languages {
+  float: right;
+  margin-right: 10px;
+
+  #portal-languageselector {
+    margin: 0;
+  }
+
+  li {
+    display: inline-block;
+    border-right: 1px solid #AAA;
+    padding: 0 0.5em;
+    margin: 6px 0;
+    font-size: @fontSizeSmall;
+
+    &:last-child {
+      border: 0;
+    }
+  }
 }

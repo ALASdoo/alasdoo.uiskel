@@ -111,6 +111,9 @@
     <!-- Navigation -->
     <replace css:content="#portal-globalnav" css:theme-children=".navbar-inner" />
 
+    <!-- Languages -->
+    <replace css:content="#portal-languageselector" css:theme-children="#languages" />
+
 
 
     <!-- BODY -->

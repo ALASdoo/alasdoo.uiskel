@@ -1885,17 +1885,28 @@ footer {
 #search-and-links #languages li {
   white-space: nowrap;
 }
-#search-and-links #languages li {
-  margin-right: 5px;
-}
-#search-and-links #languages li:last-child {
-  margin-right: 0;
-}
 #search-and-links #portal-searchbox {
   text-align: left;
 }
 #search-and-links #portal-searchbox form {
   white-space: nowrap;
+}
+#languages {
+  float: right;
+  margin-right: 10px;
+}
+#languages #portal-languageselector {
+  margin: 0;
+}
+#languages li {
+  display: inline-block;
+  border-right: 1px solid #AAA;
+  padding: 0 0.5em;
+  margin: 6px 0;
+  font-size: 11.9px;
+}
+#languages li:last-child {
+  border: 0;
 }
 .navbar {
   overflow: visible;
@@ -3275,6 +3286,9 @@ input.destructive.active {
   margin-right: 0;
 }
 .portletRecent img {
+  display: none;
+}
+.portletWorkflowReview img {
   display: none;
 }
 .portlets-manager .portletAssignments {
